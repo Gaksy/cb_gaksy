@@ -40,11 +40,12 @@ public class ClientProxy extends CommonProxy {
             registerModel("inception/carpet/inc_carpet0_" + meta, CbBlocks.INC_CARPET0, meta);
         }
 
-        registerModel("inception/inc_asphalt", CbBlocks.INC_ASPHALT, 0);
-
         for (BlockMarble.MarbleType type : BlockMarble.MarbleType.values()) {
             registerModel("inception/marble/inc_marble_" + type.getName(), CbBlocks.INC_MARBLE, type.ordinal());
         }
+
+        registerModel("inception/inc_asphalt", CbBlocks.INC_ASPHALT, 0);
+        registerModel("inception/inc_frosted_block", CbBlocks.INC_FROSTED_BLOCK, 0);
     }
 
     private void registerModel(String path, Block block, int meta) {
