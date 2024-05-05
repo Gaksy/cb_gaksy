@@ -2,6 +2,7 @@ package com.laelioa.cbmod.proxy;
 
 import com.laelioa.cbmod.Reference;
 import com.laelioa.cbmod.blocks.BlockAsphalt;
+import com.laelioa.cbmod.blocks.inception.BlockConcrete;
 import com.laelioa.cbmod.blocks.inception.BlockMarble;
 import com.laelioa.cbmod.init.CbBlocks;
 import net.minecraft.block.Block;
@@ -42,6 +43,10 @@ public class ClientProxy extends CommonProxy {
 
         for (BlockMarble.MarbleType type : BlockMarble.MarbleType.values()) {
             registerModel("inception/marble/inc_marble_" + type.getName(), CbBlocks.INC_MARBLE, type.ordinal());
+        }
+
+        for (BlockConcrete.ConcreteType type : BlockConcrete.ConcreteType.values()) {
+            registerModel("inception/concrete/inc_concrete_" + type.getName(), CbBlocks.INC_CONCRETE, type.ordinal());
         }
 
         registerModel("inception/inc_asphalt", CbBlocks.INC_ASPHALT, 0);
