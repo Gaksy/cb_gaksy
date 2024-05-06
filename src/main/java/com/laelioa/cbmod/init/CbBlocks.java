@@ -38,12 +38,7 @@ public class CbBlocks {
         registry.register(ASPHALT);
 
         // Inception
-        registry.register(INC_CARPET);
-        registry.register(INC_CARPET0);
-        registry.register(INC_MARBLE);
-        registry.register(INC_CONCRETE);
-        registry.register(INC_ASPHALT);
-        registry.register(INC_FROSTED_BLOCK);
+        registry.registerAll(RegistryHandler.BLOCKS.toArray(new Block[0]));
     }
 
     public static void registerItemBlocks(IForgeRegistry<Item> registry) {
