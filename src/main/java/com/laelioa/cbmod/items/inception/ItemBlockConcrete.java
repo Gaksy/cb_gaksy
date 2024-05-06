@@ -1,7 +1,6 @@
 package com.laelioa.cbmod.items.inception;
 
 import com.laelioa.cbmod.Reference;
-import com.laelioa.cbmod.blocks.inception.BlockConcrete;
 import com.laelioa.cbmod.init.CbBlocks;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
@@ -23,7 +22,6 @@ public class ItemBlockConcrete extends ItemBlock {
     @Nonnull
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return super.getUnlocalizedName() + "." +
-                BlockConcrete.ConcreteType.byMetadata(stack.getMetadata()).getName();
+        return super.getUnlocalizedName() + "_" + stack.getMetadata();
     }
 }

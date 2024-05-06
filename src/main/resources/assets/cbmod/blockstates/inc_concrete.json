@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "type=0": { "model": "cbmod:inception/concrete/inc_concrete_0_model" },
+    "type=1": { "model": "cbmod:inception/concrete/inc_concrete_1_model" },
+    "type=2": { "model": "cbmod:inception/concrete/inc_concrete_2_model" },
+    "type=3": { "model": "cbmod:inception/concrete/inc_concrete_3_model" },
+    "type=4": { "model": "cbmod:inception/concrete/inc_concrete_4_model" },
+    "type=5": { "model": "cbmod:inception/concrete/inc_concrete_5_model" },
+    "type=6": { "model": "cbmod:inception/concrete/inc_concrete_6_model" },
+    "type=7": { "model": "cbmod:inception/concrete/inc_concrete_7_model" }
+  }
+}
