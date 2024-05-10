@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "type=0": { "model": "cbmod:inception/ceramic/inc_ceramic_0_model" },
+    "type=1": { "model": "cbmod:inception/ceramic/inc_ceramic_1_model" },
+    "type=2": { "model": "cbmod:inception/ceramic/inc_ceramic_2_model" },
+    "type=3": { "model": "cbmod:inception/ceramic/inc_ceramic_3_model" },
+    "type=4": { "model": "cbmod:inception/ceramic/inc_ceramic_4_model" },
+    "type=5": { "model": "cbmod:inception/ceramic/inc_ceramic_5_model" },
+    "type=6": { "model": "cbmod:inception/ceramic/inc_ceramic_6_model" },
+    "type=7": { "model": "cbmod:inception/ceramic/inc_ceramic_7_model" },
+    "type=8": { "model": "cbmod:inception/ceramic/inc_ceramic_8_model" },
+    "type=9": { "model": "cbmod:inception/ceramic/inc_ceramic_9_model" }
+  }
+}

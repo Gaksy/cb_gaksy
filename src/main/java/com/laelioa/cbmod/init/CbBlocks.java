@@ -4,10 +4,7 @@ import com.laelioa.cbmod.Reference;
 import com.laelioa.cbmod.blocks.BlockAsphalt;
 import com.laelioa.cbmod.blocks.inception.*;
 import com.laelioa.cbmod.items.ItemBlockAsphalt;
-import com.laelioa.cbmod.items.inception.ItemBlockCarpet;
-import com.laelioa.cbmod.items.inception.ItemBlockCarpet0;
-import com.laelioa.cbmod.items.inception.ItemBlockConcrete;
-import com.laelioa.cbmod.items.inception.ItemBlockMarble;
+import com.laelioa.cbmod.items.inception.*;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -18,7 +15,8 @@ public class CbBlocks {
     public static final Block ASPHALT;
 
     // Inception
-    public static final Block INC_CARPET, INC_CARPET0, INC_MARBLE, INC_CONCRETE, INC_ASPHALT, INC_FROSTED_BLOCK;
+    public static final Block INC_CARPET, INC_CARPET0, INC_MARBLE, INC_CONCRETE, INC_CERAMIC, INC_ASPHALT,
+            INC_FROSTED_BLOCK;
 
     static {
         // Road
@@ -29,6 +27,7 @@ public class CbBlocks {
         INC_CARPET0 = new BlockCarpet0();
         INC_MARBLE = new BlockMarble();
         INC_CONCRETE = new BlockConcrete();
+        INC_CERAMIC = new BlockCeramic();
         INC_ASPHALT = new BlockInception("inc_asphalt");
         INC_FROSTED_BLOCK = new BlockInception("inc_frosted_block");
     }
@@ -50,6 +49,7 @@ public class CbBlocks {
         registry.register(new ItemBlockCarpet0());
         registry.register(new ItemBlockMarble());
         registry.register(new ItemBlockConcrete());
+        registry.register(new ItemBlockCeramic());
         registry.register(new ItemBlock(INC_ASPHALT).setRegistryName(Reference.MODID, "inc_asphalt"));
         registry.register(new ItemBlock(INC_FROSTED_BLOCK).setRegistryName(Reference.MODID, "inc_frosted_block"));
     }
