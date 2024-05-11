@@ -13,6 +13,11 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
 
+/**
+ * <h2>BlockCarpet0</h2>
+ * 地毯 （方块只有16种状态），这是第17 18种
+ * @author RMSCA
+ * */
 public class BlockCarpet0 extends BlockInception {
     private static final PropertyInteger TYPE = PropertyInteger.create("type", 0, 1);
 

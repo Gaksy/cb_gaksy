@@ -7,6 +7,11 @@ import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nonnull;
 
+/**
+ * <h2>ItemBlockCeramic</h2>
+ * 陶瓷
+ * @author RMSCA
+ * */
 public class ItemBlockCeramic extends ItemBlock {
     public ItemBlockCeramic() {
         super(CbBlocks.INC_CERAMIC);

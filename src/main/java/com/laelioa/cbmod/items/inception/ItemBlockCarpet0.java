@@ -7,6 +7,11 @@ import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nonnull;
 
+/**
+ * <h2>ItemBlockCarpet0</h2>
+ * 地毯 方块状态上限16种，这是第17种
+ * @author RMSCA
+ * */
 public class ItemBlockCarpet0 extends ItemBlock {
     public ItemBlockCarpet0() {
         super(CbBlocks.INC_CARPET0);
