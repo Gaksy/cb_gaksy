@@ -8,6 +8,11 @@ import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nonnull;
 
+/**
+ * <h2>ItemBlockMarble</h2>
+ * 大理石
+ * @author RMSCA
+ * */
 public class ItemBlockMarble extends ItemBlock {
     public ItemBlockMarble() {
         super(CbBlocks.INC_MARBLE);

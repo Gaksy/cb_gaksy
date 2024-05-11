@@ -13,6 +13,11 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
 
+/**
+ * <h2>BlockCeramic</h2>
+ * 陶瓷
+ * @author RMSCA
+ * */
 public class BlockCeramic extends BlockInception {
     private static final PropertyInteger TYPE = PropertyInteger.create("type", 0, 9);
 

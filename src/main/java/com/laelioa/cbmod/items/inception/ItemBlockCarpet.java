@@ -7,6 +7,11 @@ import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nonnull;
 
+/**
+ * <h2>ItemBlockCarpet</h2>
+ * 地毯
+ * @author RMSCA
+ * */
 public class ItemBlockCarpet extends ItemBlock {
     public ItemBlockCarpet() {
         super(CbBlocks.INC_CARPET);

@@ -7,6 +7,11 @@ import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nonnull;
 
+/**
+ * <h2>ItemBlockConcrete</h2>
+ * 混凝土
+ * @author RMSCA
+ * */
 public class ItemBlockConcrete extends ItemBlock {
     public ItemBlockConcrete() {
         super(CbBlocks.INC_CONCRETE);

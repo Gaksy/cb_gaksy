@@ -6,6 +6,11 @@ import com.laelioa.cbmod.init.RegistryHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
+/**
+ * <h2>BlockInception</h2>
+ * 在incTab的物品都会继承该类
+ * @author RMSCA
+ * */
 public class BlockInception extends Block {
     public BlockInception(String name) {
         super(Material.ROCK);

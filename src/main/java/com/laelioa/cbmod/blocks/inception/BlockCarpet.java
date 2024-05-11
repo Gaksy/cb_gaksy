@@ -13,6 +13,11 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
 
+/**
+ * <h2>BlockCarpet</h2>
+ * 地毯
+ * @author RMSCA
+ * */
 public class BlockCarpet extends BlockInception {
     private static final PropertyInteger TYPE = PropertyInteger.create("type", 0, 15);
 

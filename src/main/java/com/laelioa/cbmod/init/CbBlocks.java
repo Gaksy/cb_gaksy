@@ -18,6 +18,7 @@ public class CbBlocks {
     public static final Block INC_CARPET, INC_CARPET0, INC_MARBLE, INC_CONCRETE, INC_CERAMIC, INC_ASPHALT,
             INC_FROSTED_BLOCK;
 
+    //静态初始化static复合语句，初始化且仅初始化一次
     static {
         // Road
         ASPHALT = new BlockAsphalt();
@@ -32,6 +33,11 @@ public class CbBlocks {
         INC_FROSTED_BLOCK = new BlockInception("inc_frosted_block");
     }
 
+    /**
+     * 注册方块
+     * <br>由 {@link RegistryHandler} 调用
+     * @author RMSCA, Zhu
+     * */
     public static void registerBlocks(IForgeRegistry<Block> registry) {
         // Road
         registry.register(ASPHALT);
@@ -40,6 +46,11 @@ public class CbBlocks {
         registry.registerAll(RegistryHandler.BLOCKS.toArray(new Block[0]));
     }
 
+    /**
+     * 注册物品
+     * <br>由 {@link RegistryHandler} 调用
+     * @author RMSCA, Zhu, RMSCA*
+     * */
     public static void registerItemBlocks(IForgeRegistry<Item> registry) {
         // Road
         registry.register(new ItemBlockAsphalt());

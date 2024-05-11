@@ -14,6 +14,11 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
 
+/**
+ * <h2>BlockMarble</h2>
+ * 大理石
+ * @author RMSCA
+ * */
 public class BlockMarble extends BlockInception {
     private static final PropertyEnum<MarbleType> TYPE = PropertyEnum.create("type", MarbleType.class);
 
