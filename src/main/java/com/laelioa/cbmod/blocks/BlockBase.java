@@ -76,7 +76,7 @@ public class BlockBase extends Block {
         setRegistryName(Reference.MODID, block_name);       //设置其注册名称 示例：cbmod::block_name
         setUnlocalizedName(block_name + "_unlocalized");    //设置本地化键名 示例：block_name_unlocalized
 
-        setCreativeTab(crateive_tab);                  //设置方块所在的创造模式物品栏
+        setCreativeTab(crateive_tab);                             //设置方块所在的创造模式物品栏
 
         RegistryHandler.addBlock(block_name, this);      //将自身添加到注册列表
     }
