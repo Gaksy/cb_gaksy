@@ -16,10 +16,4 @@ public class ItemBlockMarble extends ItemBlockBase {
     public ItemBlockMarble() {
         super(CbObjects.BLOCK_INC_MARBLE, true);
     }
-
-    @Nonnull
-    @Override
-    public String getUnlocalizedName(ItemStack stack) {
-        return super.getUnlocalizedName() + "." + BlockMarble.MarbleType.byMetadata(stack.getMetadata()).getName();
-    }
 }

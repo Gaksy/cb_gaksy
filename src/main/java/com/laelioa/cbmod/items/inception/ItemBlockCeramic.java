@@ -15,10 +15,4 @@ public class ItemBlockCeramic extends ItemBlockBase {
     public ItemBlockCeramic() {
         super(CbObjects.BLOCK_INC_CERAMIC, true);
     }
-
-    @Nonnull
-    @Override
-    public String getUnlocalizedName(ItemStack stack) {
-        return super.getUnlocalizedName() + "_" + stack.getMetadata();
-    }
 }

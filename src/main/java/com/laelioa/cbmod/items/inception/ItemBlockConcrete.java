@@ -15,10 +15,4 @@ public class ItemBlockConcrete extends ItemBlockBase {
     public ItemBlockConcrete() {
         super(CbObjects.BLOCK_INC_CONCRETE, true);
     }
-
-    @Nonnull
-    @Override
-    public String getUnlocalizedName(ItemStack stack) {
-        return super.getUnlocalizedName() + "_" + stack.getMetadata();
-    }
 }

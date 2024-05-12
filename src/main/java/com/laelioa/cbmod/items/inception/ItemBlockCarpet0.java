@@ -15,10 +15,4 @@ public class ItemBlockCarpet0 extends ItemBlockBase {
     public ItemBlockCarpet0() {
         super(CbObjects.BLOCK_INC_CARPET_0, true);
     }
-
-    @Nonnull
-    @Override
-    public String getUnlocalizedName(ItemStack stack) {
-        return super.getUnlocalizedName() + "_" + stack.getMetadata();
-    }
 }
