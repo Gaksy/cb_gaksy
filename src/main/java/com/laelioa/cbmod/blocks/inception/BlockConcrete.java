@@ -92,16 +92,4 @@ public class BlockConcrete extends BlockBase {
             items.add(new ItemStack(this, 1, meta));
         }
     }
-
-    /**
-     * <h2>getPickBlock</h2>
-     * 这个方法的作用是给创造模式鼠标中键选择方块提供物品
-     * @author RMSCA
-     * */
-    @Nonnull
-    @ParametersAreNonnullByDefault
-    @Override
-    public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-        return new ItemStack(this, 1, getMetaFromState(state));
-    }
 }

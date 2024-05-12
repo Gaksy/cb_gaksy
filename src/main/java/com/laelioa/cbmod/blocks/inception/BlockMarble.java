@@ -79,18 +79,6 @@ public class BlockMarble extends BlockBase {
     }
 
     /**
-     * <h2>getPickBlock</h2>
-     * 这个方法的作用是给创造模式鼠标中键选择方块提供物品
-     * @author RMSCA
-     * */
-    @Nonnull
-    @ParametersAreNonnullByDefault
-    @Override
-    public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-        return new ItemStack(this, 1, getMetaFromState(state));
-    }
-
-    /**
      * <h2>大理石方块的状态</h2>
      * */
     public enum MarbleType implements IStringSerializable {
