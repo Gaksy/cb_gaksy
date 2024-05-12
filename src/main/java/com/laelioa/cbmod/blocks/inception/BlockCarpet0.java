@@ -1,5 +1,7 @@
 package com.laelioa.cbmod.blocks.inception;
 
+import com.laelioa.cbmod.ComfortBox;
+import com.laelioa.cbmod.blocks.BlockBase;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -18,11 +20,11 @@ import javax.annotation.Nonnull;
  * 地毯 （方块只有16种状态），这是第17 18种
  * @author RMSCA
  * */
-public class BlockCarpet0 extends BlockInception {
+public class BlockCarpet0 extends BlockBase {
     private static final PropertyInteger TYPE = PropertyInteger.create("type", 0, 1);
 
     public BlockCarpet0() {
-        super("inc_carpet0");
+        super("inc_carpet0", ComfortBox.incTab);
     }
 
     @Nonnull

@@ -1,5 +1,7 @@
 package com.laelioa.cbmod.blocks.inception;
 
+import com.laelioa.cbmod.ComfortBox;
+import com.laelioa.cbmod.blocks.BlockBase;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -18,12 +20,12 @@ import javax.annotation.Nonnull;
  * 陶瓷
  * @author RMSCA
  * */
-public class BlockCeramic extends BlockInception {
+public class BlockCeramic extends BlockBase {
     private static final PropertyInteger TYPE = PropertyInteger.create("type", 0, 9);
 
 
     public BlockCeramic() {
-        super("inc_ceramic");
+        super("inc_ceramic", ComfortBox.incTab);
     }
 
     @Nonnull

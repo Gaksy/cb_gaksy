@@ -1,8 +1,7 @@
 package com.laelioa.cbmod.items.inception;
 
-import com.laelioa.cbmod.Reference;
-import com.laelioa.cbmod.init.CbBlocks;
-import net.minecraft.item.ItemBlock;
+import com.laelioa.cbmod.init.CbObject;
+import com.laelioa.cbmod.items.ItemBlockBase;
 import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nonnull;
@@ -12,11 +11,9 @@ import javax.annotation.Nonnull;
  * 地毯
  * @author RMSCA
  * */
-public class ItemBlockCarpet extends ItemBlock {
+public class ItemBlockCarpet extends ItemBlockBase {
     public ItemBlockCarpet() {
-        super(CbBlocks.INC_CARPET);
-        setRegistryName(Reference.MODID, "inc_carpet");
-        setHasSubtypes(true);
+        super(CbObject.BLOCK_INC_CARPET, true);
     }
 
     @Override

@@ -1,8 +1,7 @@
 package com.laelioa.cbmod.items.inception;
 
-import com.laelioa.cbmod.Reference;
-import com.laelioa.cbmod.init.CbBlocks;
-import net.minecraft.item.ItemBlock;
+import com.laelioa.cbmod.init.CbObject;
+import com.laelioa.cbmod.items.ItemBlockBase;
 import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nonnull;
@@ -12,11 +11,9 @@ import javax.annotation.Nonnull;
  * 陶瓷
  * @author RMSCA
  * */
-public class ItemBlockCeramic extends ItemBlock {
+public class ItemBlockCeramic extends ItemBlockBase {
     public ItemBlockCeramic() {
-        super(CbBlocks.INC_CERAMIC);
-        setRegistryName(Reference.MODID, "inc_ceramic");
-        setHasSubtypes(true);
+        super(CbObject.BLOCK_INC_CERAMIC, true);
     }
 
     @Override

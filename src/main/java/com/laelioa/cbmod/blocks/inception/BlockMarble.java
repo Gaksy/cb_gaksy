@@ -1,5 +1,7 @@
 package com.laelioa.cbmod.blocks.inception;
 
+import com.laelioa.cbmod.ComfortBox;
+import com.laelioa.cbmod.blocks.BlockBase;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -19,11 +21,11 @@ import javax.annotation.Nonnull;
  * 大理石
  * @author RMSCA
  * */
-public class BlockMarble extends BlockInception {
+public class BlockMarble extends BlockBase {
     private static final PropertyEnum<MarbleType> TYPE = PropertyEnum.create("type", MarbleType.class);
 
     public BlockMarble() {
-        super("inc_marble");
+        super("inc_marble", ComfortBox.incTab);
     }
 
     @Nonnull

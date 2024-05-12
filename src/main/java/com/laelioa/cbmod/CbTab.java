@@ -1,9 +1,8 @@
 package com.laelioa.cbmod;
 
-import com.laelioa.cbmod.init.CbBlocks;
+import com.laelioa.cbmod.init.CbObject;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nonnull;
@@ -21,7 +20,6 @@ public class CbTab extends CreativeTabs {
         super(label);
         LABEL = label;
     }
-
 
     /**
      * <h2>getTabIconItem</h2>
@@ -42,9 +40,9 @@ public class CbTab extends CreativeTabs {
     public ItemStack getTabIconItem() {
         switch (LABEL) {
             case "road":
-                return new ItemStack(CbBlocks.ASPHALT, 1, 4);
+                return new ItemStack(CbObject.BLOCK_ASPHALT, 1, 4);
             case "inc":
-                return new ItemStack(CbBlocks.INC_CARPET, 1, 0);
+                return new ItemStack(CbObject.BLOCK_INC_CARPET, 1, 0);
             default:
                 return new ItemStack(Items.AIR);
 

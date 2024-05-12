@@ -1,9 +1,8 @@
 package com.laelioa.cbmod.items.inception;
 
-import com.laelioa.cbmod.Reference;
 import com.laelioa.cbmod.blocks.inception.BlockMarble;
-import com.laelioa.cbmod.init.CbBlocks;
-import net.minecraft.item.ItemBlock;
+import com.laelioa.cbmod.init.CbObject;
+import com.laelioa.cbmod.items.ItemBlockBase;
 import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nonnull;
@@ -13,11 +12,9 @@ import javax.annotation.Nonnull;
  * 大理石
  * @author RMSCA
  * */
-public class ItemBlockMarble extends ItemBlock {
+public class ItemBlockMarble extends ItemBlockBase {
     public ItemBlockMarble() {
-        super(CbBlocks.INC_MARBLE);
-        setRegistryName(Reference.MODID, "inc_marble");
-        setHasSubtypes(true);
+        super(CbObject.BLOCK_INC_MARBLE, true);
     }
 
     @Override

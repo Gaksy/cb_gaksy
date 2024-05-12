@@ -2,9 +2,8 @@ package com.laelioa.cbmod.proxy;
 
 import com.laelioa.cbmod.Reference;
 import com.laelioa.cbmod.blocks.BlockAsphalt;
-import com.laelioa.cbmod.blocks.inception.BlockConcrete;
 import com.laelioa.cbmod.blocks.inception.BlockMarble;
-import com.laelioa.cbmod.init.CbBlocks;
+import com.laelioa.cbmod.init.CbObject;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -40,31 +39,31 @@ public class ClientProxy extends CommonProxy {
     @Override
     public void registerBlockModels() {
         for (BlockAsphalt.AsphaltType type : BlockAsphalt.AsphaltType.values()) {
-            registerModel("asphalt/asphalt_" + type.getName(), CbBlocks.ASPHALT, type.ordinal());
+            registerModel("asphalt/asphalt_" + type.getName(), CbObject.BLOCK_ASPHALT, type.ordinal());
         }
 
         for (int meta = 0; meta < 16; meta++) {
-            registerModel("inception/carpet/inc_carpet_" + meta, CbBlocks.INC_CARPET, meta);
+            registerModel("inception/carpet/inc_carpet_" + meta, CbObject.BLOCK_INC_CARPET, meta);
         }
 
         for (int meta = 0; meta < 2; meta++) {
-            registerModel("inception/carpet/inc_carpet0_" + meta, CbBlocks.INC_CARPET0, meta);
+            registerModel("inception/carpet/inc_carpet0_" + meta, CbObject.BLOCK_INC_CARPET_0, meta);
         }
 
         for (BlockMarble.MarbleType type : BlockMarble.MarbleType.values()) {
-            registerModel("inception/marble/inc_marble_" + type.getName(), CbBlocks.INC_MARBLE, type.ordinal());
+            registerModel("inception/marble/inc_marble_" + type.getName(), CbObject.BLOCK_INC_MARBLE, type.ordinal());
         }
 
         for (int meta = 0; meta < 8; meta++) {
-            registerModel("inception/concrete/inc_concrete_" + meta, CbBlocks.INC_CONCRETE, meta);
+            registerModel("inception/concrete/inc_concrete_" + meta, CbObject.BLOCK_INC_CONCRETE, meta);
         }
 
         for (int meta = 0; meta < 10; meta++) {
-            registerModel("inception/ceramic/inc_ceramic_" + meta, CbBlocks.INC_CERAMIC, meta);
+            registerModel("inception/ceramic/inc_ceramic_" + meta, CbObject.BLOCK_INC_CERAMIC, meta);
         }
 
-        registerModel("inception/inc_asphalt", CbBlocks.INC_ASPHALT, 0);
-        registerModel("inception/inc_frosted_block", CbBlocks.INC_FROSTED_BLOCK, 0);
+        registerModel("inception/inc_asphalt", CbObject.BLOCK_INC_ASPHALT, 0);
+        registerModel("inception/inc_frosted_block", CbObject.BLOCK_INC_FROSTED, 0);
     }
 
     /**

@@ -1,8 +1,7 @@
 package com.laelioa.cbmod.items.inception;
 
-import com.laelioa.cbmod.Reference;
-import com.laelioa.cbmod.init.CbBlocks;
-import net.minecraft.item.ItemBlock;
+import com.laelioa.cbmod.init.CbObject;
+import com.laelioa.cbmod.items.ItemBlockBase;
 import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nonnull;
@@ -12,11 +11,9 @@ import javax.annotation.Nonnull;
  * 混凝土
  * @author RMSCA
  * */
-public class ItemBlockConcrete extends ItemBlock {
+public class ItemBlockConcrete extends ItemBlockBase {
     public ItemBlockConcrete() {
-        super(CbBlocks.INC_CONCRETE);
-        setRegistryName(Reference.MODID, "inc_concrete");
-        setHasSubtypes(true);
+        super(CbObject.BLOCK_INC_CONCRETE, true);
     }
 
     @Override

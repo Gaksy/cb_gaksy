@@ -23,7 +23,7 @@ import javax.annotation.Nonnull;
  * 沥青方块，该方块拥有多种状态
  * @author RMSCA
  * */
-public class BlockAsphalt extends Block {
+public class BlockAsphalt extends BlockBase {
 
     /**
      * <h2>PropertyEnum&lt;E extends Enum&lt;E&gt;&gt;</h2>
@@ -37,10 +37,7 @@ public class BlockAsphalt extends Block {
     private static final PropertyEnum<AsphaltType> TYPE = PropertyEnum.create("type", AsphaltType.class);
 
     public BlockAsphalt() {
-        super(Material.ROCK);
-        setRegistryName(Reference.MODID, "asphalt");     //设置注册名称
-        setUnlocalizedName("asphalt_unlocalized");             //设置本地化键名
-        setCreativeTab(ComfortBox.roadTab);                    //物品所在的创造模式物品栏
+        super("asphalt", ComfortBox.roadTab);
     }
 
     @Nonnull

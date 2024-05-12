@@ -1,8 +1,7 @@
 package com.laelioa.cbmod.items.inception;
 
-import com.laelioa.cbmod.Reference;
-import com.laelioa.cbmod.init.CbBlocks;
-import net.minecraft.item.ItemBlock;
+import com.laelioa.cbmod.init.CbObject;
+import com.laelioa.cbmod.items.ItemBlockBase;
 import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nonnull;
@@ -12,11 +11,9 @@ import javax.annotation.Nonnull;
  * 地毯 方块状态上限16种，这是第17种
  * @author RMSCA
  * */
-public class ItemBlockCarpet0 extends ItemBlock {
+public class ItemBlockCarpet0 extends ItemBlockBase {
     public ItemBlockCarpet0() {
-        super(CbBlocks.INC_CARPET0);
-        setRegistryName(Reference.MODID, "inc_carpet0");
-        setHasSubtypes(true);
+        super(CbObject.BLOCK_INC_CARPET_0, true);
     }
 
     @Override

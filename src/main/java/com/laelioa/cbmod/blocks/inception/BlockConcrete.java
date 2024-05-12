@@ -1,5 +1,7 @@
 package com.laelioa.cbmod.blocks.inception;
 
+import com.laelioa.cbmod.ComfortBox;
+import com.laelioa.cbmod.blocks.BlockBase;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
@@ -20,7 +22,7 @@ import javax.annotation.Nonnull;
  * 混凝土
  * @author Howell Zhu
  * */
-public class BlockConcrete extends BlockInception {
+public class BlockConcrete extends BlockBase {
     /**
      * <a href="https://teamcovertdragon.github.io/Harbinger/63/chapter-05/block-state.html">参考文档</a>
      * <br>
@@ -30,7 +32,7 @@ public class BlockConcrete extends BlockInception {
     private static final PropertyInteger TYPE = PropertyInteger.create("type", 0, 7);
 
     public BlockConcrete() {
-        super("inc_concrete");
+        super("inc_concrete", ComfortBox.incTab);
     }
 
     @Nonnull
