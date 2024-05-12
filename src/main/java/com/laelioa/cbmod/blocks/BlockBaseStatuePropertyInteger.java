@@ -3,8 +3,12 @@ package com.laelioa.cbmod.blocks;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -73,5 +77,18 @@ public class BlockBaseStatuePropertyInteger extends BlockBase {
         for (int meta = 0; meta < STATUS_NUM; meta++) {
             items.add(new ItemStack(this, 1, meta));
         }
+    }
+
+    /**
+     * <h2>getPickBlock</h2>
+     * 这个方法的作用是给创造模式鼠标中键选择方块提供物品，注意state
+     * @author RMSCA
+     * */
+    @Nonnull
+    @ParametersAreNonnullByDefault
+    @Override
+    public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
+        state.getBlock();
+        return new ItemStack(this, 1, getMetaFromState(state));
     }
 }

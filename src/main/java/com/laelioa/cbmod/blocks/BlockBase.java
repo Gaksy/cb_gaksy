@@ -4,16 +4,7 @@ import com.laelioa.cbmod.Reference;
 import com.laelioa.cbmod.init.RegistryHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.world.World;
-
-import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
 
 
 /**
@@ -101,17 +92,5 @@ public class BlockBase extends Block {
      * */
     public String getBlockName(){
         return block_name;
-    }
-
-    /**
-     * <h2>getPickBlock</h2>
-     * 这个方法的作用是给创造模式鼠标中键选择方块提供物品
-     * @author RMSCA
-     * */
-    @Nonnull
-    @ParametersAreNonnullByDefault
-    @Override
-    public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-        return new ItemStack(this, 1, getMetaFromState(state));
     }
 }
