@@ -106,13 +106,13 @@ public class RegistryHandler {
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
-        CbObject.registerBlocks(event.getRegistry());                           //额外的需要注册的方块
+        CbObjects.registerBlocks(event.getRegistry());                           //额外的需要注册的方块
         event.getRegistry().registerAll(getBlocks().toArray(new Block[0]));     //注册所有在列表里的方块
     }
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
-        CbObject.registerItemBlocks(event.getRegistry());                       //额外的需要注册的物品
+        CbObjects.registerItemBlocks(event.getRegistry());                       //额外的需要注册的物品
         event.getRegistry().registerAll(getItems().toArray(new Item[0]));       //注册所有在列表里的物品
     }
 

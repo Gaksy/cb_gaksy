@@ -24,11 +24,11 @@ import net.minecraftforge.registries.IForgeRegistry;
  *
  * @author gaksy
  * */
-public class CbObject {
+public class CbObjects {
 
     /**
      * <h2>BLOCK/INCEPTION 初始化区域</h2>
-     * <p>Goto {@link CbObject#ITEM_BLOCK_INC_CARPET ITEM_BLOCK/INCEPTION}</p>
+     * <p>Goto {@link CbObjects#ITEM_BLOCK_INC_CARPET ITEM_BLOCK/INCEPTION}</p>
      **/
     //blocks.inception
     public static final BlockCarpet BLOCK_INC_CARPET = new BlockCarpet();
@@ -41,14 +41,14 @@ public class CbObject {
 
     /**
      * <h2>BLOCK/ROAD 初始化区域</h2>
-     * <p>Goto {@link CbObject#ITEM_BLOCK_ASPHALT ITEM_BLOCK/ROAD}</p>
+     * <p>Goto {@link CbObjects#ITEM_BLOCK_ASPHALT ITEM_BLOCK/ROAD}</p>
      **/
     //blocks
     public static final BlockAsphalt BLOCK_ASPHALT = new BlockAsphalt();
 
     /**
      * <h2>ITEM_BLOCK/INCEPTION 初始化区域</h2>
-     * <p>Goto {@link CbObject#BLOCK_INC_CARPET BLOCK/INCEPTION}</p>
+     * <p>Goto {@link CbObjects#BLOCK_INC_CARPET BLOCK/INCEPTION}</p>
      **/
     //items.inception
     public static final ItemBlockCarpet ITEM_BLOCK_INC_CARPET = new ItemBlockCarpet();
@@ -61,7 +61,7 @@ public class CbObject {
 
     /**
      * <h2>ITEM_BLOCK/ROAD 初始化区域</h2>
-     * <p>Goto {@link CbObject#BLOCK_ASPHALT BLOCK/ROAD}</p>
+     * <p>Goto {@link CbObjects#BLOCK_ASPHALT BLOCK/ROAD}</p>
      **/
     //items
     public static final ItemBlockAsphalt ITEM_BLOCK_ASPHALT = new ItemBlockAsphalt();

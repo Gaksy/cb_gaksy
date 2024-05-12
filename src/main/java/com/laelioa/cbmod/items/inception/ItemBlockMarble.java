@@ -1,7 +1,7 @@
 package com.laelioa.cbmod.items.inception;
 
 import com.laelioa.cbmod.blocks.inception.BlockMarble;
-import com.laelioa.cbmod.init.CbObject;
+import com.laelioa.cbmod.init.CbObjects;
 import com.laelioa.cbmod.items.ItemBlockBase;
 import net.minecraft.item.ItemStack;
 
@@ -14,18 +14,12 @@ import javax.annotation.Nonnull;
  * */
 public class ItemBlockMarble extends ItemBlockBase {
     public ItemBlockMarble() {
-        super(CbObject.BLOCK_INC_MARBLE, true);
-    }
-
-    @Override
-    public int getMetadata(int meta) {
-        return meta;
+        super(CbObjects.BLOCK_INC_MARBLE, true);
     }
 
     @Nonnull
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return super.getUnlocalizedName() + "." +
-                BlockMarble.MarbleType.byMetadata(stack.getMetadata()).getName();
+        return super.getUnlocalizedName() + "." + BlockMarble.MarbleType.byMetadata(stack.getMetadata()).getName();
     }
 }

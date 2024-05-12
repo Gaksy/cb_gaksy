@@ -32,4 +32,9 @@ public class ItemBlockBase extends ItemBlock {
 
         RegistryHandler.addItem(dec_block.getBlockName(), this); //将物品添加到注册列表
     }
+
+    @Override
+    public int getMetadata(int meta) {
+        return meta;
+    }
 }

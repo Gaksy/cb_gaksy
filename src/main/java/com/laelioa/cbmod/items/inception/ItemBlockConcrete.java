@@ -1,6 +1,6 @@
 package com.laelioa.cbmod.items.inception;
 
-import com.laelioa.cbmod.init.CbObject;
+import com.laelioa.cbmod.init.CbObjects;
 import com.laelioa.cbmod.items.ItemBlockBase;
 import net.minecraft.item.ItemStack;
 
@@ -13,12 +13,7 @@ import javax.annotation.Nonnull;
  * */
 public class ItemBlockConcrete extends ItemBlockBase {
     public ItemBlockConcrete() {
-        super(CbObject.BLOCK_INC_CONCRETE, true);
-    }
-
-    @Override
-    public int getMetadata(int meta) {
-        return meta;
+        super(CbObjects.BLOCK_INC_CONCRETE, true);
     }
 
     @Nonnull
