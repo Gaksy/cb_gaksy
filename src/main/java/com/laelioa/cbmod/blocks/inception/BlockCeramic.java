@@ -1,16 +1,11 @@
 package com.laelioa.cbmod.blocks.inception;
 
 import com.laelioa.cbmod.ComfortBox;
-import com.laelioa.cbmod.blocks.BlockBase;
+import com.laelioa.cbmod.blocks.BlockBaseStatuePropertyInteger;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.NonNullList;
 
 import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
 
 /**
  * <h2>Class BlockCeramic</h2>
@@ -40,52 +35,15 @@ import javax.annotation.ParametersAreNonnullByDefault;
  * </p>
  * @author RMSCA
  * */
-public class BlockCeramic extends BlockBase {
-    private static final PropertyInteger TYPE = PropertyInteger.create("type", 0, 9);
-
-
+public class BlockCeramic extends BlockBaseStatuePropertyInteger {
+    private final static PropertyInteger STATUS_TYPE = PropertyInteger.create("type", 0, 9);
     public BlockCeramic() {
-        super("inc_ceramic", ComfortBox.incTab);
+        super("inc_ceramic", ComfortBox.incTab, STATUS_TYPE, 9);
     }
 
     @Nonnull
     @Override
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, TYPE);
-    }
-
-    /**<h2>getStateFromMeta</h2>
-     * 用于将序列化方块状态的值转换为方块的meta。
-     * @author RMSCA
-     * */
-    @Nonnull
-    @Override
-    @SuppressWarnings("deprecation")
-    public IBlockState getStateFromMeta(int meta) {
-        return getDefaultState().withProperty(TYPE, meta);
-    }
-
-    /**
-     * <h2>getMetaFromState</h2>
-     * 用于将方块的meta转换为序列化方块状态的值
-     * @author RMSCA
-     * */
-    @Override
-    public int getMetaFromState(IBlockState state) {
-        return state.getValue(TYPE);
-    }
-
-    /**
-     * <h2>getSubBlocks</h2>
-     * <p>returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)</p>
-     * <p>返回具有相同ID但不同元数据（例如：wood返回4个方块）的方块列表。</p>
-     * @author RMSCA
-     * */
-    @ParametersAreNonnullByDefault
-    @Override
-    public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items) {
-        for (int meta = 0; meta < 10; meta++) {
-            items.add(new ItemStack(this, 1, meta));
-        }
+        return new BlockStateContainer(this, STATUS_TYPE);
     }
 }
