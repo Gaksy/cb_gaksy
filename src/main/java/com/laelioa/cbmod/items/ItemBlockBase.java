@@ -19,7 +19,7 @@ import javax.annotation.Nonnull;
  *     <a href="https://mcforge-ko.readthedocs.io/zh/latest/items/items/">zh-cn</a>
  * </p>
  * <p>
- *     {@link net.minecraft.item.ItemBlock#setUnlocalizedName}：
+ *     {@link ItemBlock#getUnlocalizedName}：
  *     [FORGE docs] Internationalization and Localization |
  *     <a href="https://docs.minecraftforge.net/en/latest/concepts/internationalization/">en-us</a>
  *     <a href="https://mcforge-ko.readthedocs.io/zh/latest/concepts/internationalization/">zh-cn</a>
