@@ -1,11 +1,11 @@
 package com.laelioa.cbmod.blocks;
 
-import com.laelioa.cbmod.ComfortBox;
 import com.laelioa.cbmod.Reference;
 import com.laelioa.cbmod.init.RegistryHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+
 
 /**
  * <h2>Class BlockBase</h2>

@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * <h2>Class Registrant</h2>
  * <p>BlockBase会自动调用该类，该类负责注册每一种方块</p>
- * <p>注意，只有当方块在CbObject中初始化一遍，BlockBase才会自动将方块添加到本类的待注册列表中</p>
+ * <p>注意，只有当方块在 <code>CbObject</code> 中初始化一遍， <code>BlockBase</code> 才会自动将方块添加到本类的待注册列表中</p>
  *
  * <p>相关文档：</p>
  * <p>
@@ -39,8 +39,8 @@ import java.util.Map;
 @Mod.EventBusSubscriber(modid = Reference.MODID)
 public class RegistryHandler {
 
-    private static final Map<String, Block> BLOCKS = new HashMap<String, Block>();
-    private static final Map<String, Item> ITEMS = new HashMap<String, Item>();
+    private static final Map<String, Block> BLOCKS = new HashMap<>();
+    private static final Map<String, Item> ITEMS = new HashMap<>();
 
     /**
      * <h2>addBlock({@link String} block_name, {@link net.minecraft.block.Block} dec_block)</h2>

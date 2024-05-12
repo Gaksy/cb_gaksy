@@ -14,10 +14,34 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
 
 /**
- * <h2>BlockCarpet</h2>
- * 地毯
+ * <h2>Class BlockCarpet</h2>
+ * <p>地毯方块，Inception Tab</p>
+ *
+ * <p>相关文档：</p>
+ * <p>
+ *     {@link net.minecraft.block.Block}：
+ *     [juanmuscaria] Material Docs |
+ *     <a href="https://github.juanmuscaria.com/DocsMC/net/minecraft/block/Block.html">en-us</a>
+ * </p>
+ * <p>
+ *     {@link net.minecraft.block.Block#getPickBlock}：
+ *     [知乎] 掉落物与方块 |
+ *     <a href="https://zhuanlan.zhihu.com/p/445378825">zh-cn</a>
+ * </p>
+ * <p>
+ *     {@link net.minecraft.block.properties.PropertyInteger}：
+ *     [Forge docs] Block States |
+ *     <a href="https://docs.minecraftforge.net/en/1.20.x/blocks/states/">en-us</a>
+ *     <a href="https://mcforge-ko.readthedocs.io/zh/latest/blocks/states/">zh-cn</a>
+ * </p>
+ * <p>
+ *     {@link net.minecraft.block.properties.PropertyInteger}：
+ *     [teamcovertdragon docs] Block States |
+ *     <a href="https://teamcovertdragon.github.io/Harbinger/63/chapter-05/block-state.html">zh-cn</a>
+ * </p>
  * @author RMSCA
  * */
 public class BlockCarpet extends BlockBase {
@@ -27,12 +51,17 @@ public class BlockCarpet extends BlockBase {
         super("inc_carpet", ComfortBox.incTab);
     }
 
+
     @Nonnull
     @Override
     protected BlockStateContainer createBlockState() {
         return new BlockStateContainer(this, TYPE);
     }
 
+    /**<h2>getStateFromMeta</h2>
+     * 用于将序列化方块状态的值转换为方块的meta。
+     * @author RMSCA
+     * */
     @Nonnull
     @Override
     @SuppressWarnings("deprecation")
@@ -40,11 +69,23 @@ public class BlockCarpet extends BlockBase {
         return getDefaultState().withProperty(TYPE, meta);
     }
 
+    /**
+     * <h2>getMetaFromState</h2>
+     * 用于将方块的meta转换为序列化方块状态的值
+     * @author RMSCA
+     * */
     @Override
     public int getMetaFromState(IBlockState state) {
         return state.getValue(TYPE);
     }
 
+    /**
+     * <h2>getSubBlocks</h2>
+     * <p>returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)</p>
+     * <p>返回具有相同ID但不同元数据（例如：wood返回4个方块）的方块列表。</p>
+     * @author RMSCA
+     * */
+    @ParametersAreNonnullByDefault
     @Override
     public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items) {
         for (int meta = 0; meta < 16; meta++) {
@@ -52,7 +93,13 @@ public class BlockCarpet extends BlockBase {
         }
     }
 
+    /**
+     * <h2>getPickBlock</h2>
+     * 这个方法的作用是给创造模式鼠标中键选择方块提供物品
+     * @author RMSCA
+     * */
     @Nonnull
+    @ParametersAreNonnullByDefault
     @Override
     public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
         return new ItemStack(this, 1, getMetaFromState(state));
