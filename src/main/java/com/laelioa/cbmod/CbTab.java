@@ -43,6 +43,8 @@ public class CbTab extends CreativeTabs {
                 return new ItemStack(CbBlocks.ASPHALT, 1, 4);
             case "inc":
                 return new ItemStack(CbBlocks.INC_CARPET, 1, 0);
+            case "test":
+                return new ItemStack(CbBlocks.RED, 1, 0);
             default:
                 return new ItemStack(Items.AIR);
 

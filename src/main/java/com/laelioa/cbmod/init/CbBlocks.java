@@ -25,8 +25,8 @@ import net.minecraftforge.registries.IForgeRegistry;
  *
  * @author gaksy
  * */
+@SuppressWarnings("unused")     //取消未使用警告
 public class CbBlocks {
-
     /**
      * <h2>BLOCK/INCEPTION 初始化区域</h2>
      * <p>Goto {@link CbBlocks#ITEM_INC_CARPET ITEM_BLOCK/INCEPTION}</p>
@@ -46,6 +46,7 @@ public class CbBlocks {
      **/
     //blocks
     public static final BlockBase ASPHALT = new BlockAsphalt();
+
 
     /**
      * <h2>ITEM_BLOCK/INCEPTION 初始化区域</h2>

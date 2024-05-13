@@ -43,8 +43,6 @@ import javax.annotation.ParametersAreNonnullByDefault;
  *     <a href="https://teamcovertdragon.github.io/Harbinger/63/chapter-05/block-state.html">zh-cn</a>
  * </p>
  *
- * <p>Goto {@link BlockAsphalt#AsphaltType}方块枚举</p>
- *
  * @author RMSCA
  * */
 public class BlockAsphalt extends BlockBase {

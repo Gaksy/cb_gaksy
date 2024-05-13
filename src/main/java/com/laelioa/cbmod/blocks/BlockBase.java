@@ -67,7 +67,7 @@ public class BlockBase extends Block {
      * */
     private void init(String name, CreativeTabs tab) {
         this.name = name;                                //存储block name
-        setRegistryName(Reference.MODID, name);          //设置其注册名称 示例：cbmod::block_name
+        setRegistryName(Reference.MODID, name);          //设置其注册名称 示例：cbmod:block_name
         setUnlocalizedName(name + "_unlocalized");       //设置本地化键名 示例：block_name_unlocalized
         setCreativeTab(tab);                             //设置方块所在的创造模式物品栏
         RegistryHandler.addBlock(name, this);      //将自身添加到注册列表
