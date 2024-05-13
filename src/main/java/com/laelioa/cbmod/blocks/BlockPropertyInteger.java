@@ -1,5 +1,6 @@
 package com.laelioa.cbmod.blocks;
 
+import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
@@ -29,20 +30,41 @@ public class BlockPropertyInteger extends BlockBase {
      * {@link PropertyInteger} STATUS_TYPE,
      * int max)</h2>
      *
-     * <p>{@link String} block_name: 指定方块名称</p>
-     * <p>{@link net.minecraft.creativetab.CreativeTabs} creative_tab: 指定方块的物品栏</p>
-     * <p>{@link PropertyInteger} STATUS_TYPE: 状态类型</p>
-     * <p>int max: 状态最大值(从0开始)</p>
+     * @param name 指定的方块名称
+     * @param tab 指定的创造物品栏
+     * @param TYPE 物品的状态
+     * @param maxStates 物品的最大状态值
      *
      * @author gaksy
      * */
     public BlockPropertyInteger(String name, CreativeTabs tab, PropertyInteger TYPE, int maxStates) {
         super(name, tab);
         this.TYPE = TYPE;
-        MAX_STATES = maxStates + 1;
+        MAX_STATES = maxStates;
     }
 
-    /**<h2>getStateFromMeta</h2>
+    /**
+     * <h2>BlockBaseStatuePropertyInteger({@link String} block_name,
+     * {@link net.minecraft.creativetab.CreativeTabs} creative_tab,
+     * {@link PropertyInteger} STATUS_TYPE,
+     * int max)</h2>
+     *
+     * @param name 指定的方块名称
+     * @param tab 指定的创造物品栏
+     * @param material 物品的材质
+     * @param TYPE 物品的状态
+     * @param maxStates 物品的最大状态值
+     *
+     * @author gaksy
+     * */
+    public BlockPropertyInteger(String name, CreativeTabs tab, Material material, PropertyInteger TYPE, int maxStates) {
+        super(name, tab, material);
+        this.TYPE = TYPE;
+        MAX_STATES = maxStates;
+    }
+
+
+    /**<h2>getStateFromMeta #191</h2>
      * 用于将序列化方块状态的值转换为方块的meta。
      * @author RMSCA
      * */
@@ -54,7 +76,7 @@ public class BlockPropertyInteger extends BlockBase {
     }
 
     /**
-     * <h2>getMetaFromState</h2>
+     * <h2>getMetaFromState #196</h2>
      * 用于将方块的meta转换为序列化方块状态的值
      * @author RMSCA
      * */
@@ -64,7 +86,7 @@ public class BlockPropertyInteger extends BlockBase {
     }
 
     /**
-     * <h2>getSubBlocks</h2>
+     * <h2>getSubBlocks #835</h2>
      * <p>returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)</p>
      * <p>返回具有相同ID但不同元数据（例如：wood返回4个方块）的方块列表。</p>
      * @author RMSCA
@@ -72,15 +94,17 @@ public class BlockPropertyInteger extends BlockBase {
     @ParametersAreNonnullByDefault
     @Override
     public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items) {
-        //meta在C++/C中返回了一个临时变量，会多占用一个int类型的空间，++meta则返回引用，仅一个指针大小，不知道Java里有没有这样的区别。
-        for (int meta = 0; meta < MAX_STATES; meta++) {
+        for (int meta = 0; meta <= MAX_STATES; meta++) {
             items.add(new ItemStack(this, 1, meta));
         }
     }
 
     /**
-     * <h2>getPickBlock</h2>
-     * 这个方法的作用是给创造模式鼠标中键选择方块提供物品，注意state
+     * <h2>getPickBlock #1588</h2>
+     * Called when a user uses the creative pick block button on this block
+     *
+     * @param target The full target the player is looking at
+     * @return A ItemStack to add to the player's inventory, empty itemstack if nothing should be added.
      * @author RMSCA
      * */
     @Nonnull

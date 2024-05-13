@@ -31,9 +31,9 @@ public class BlockBase extends Block {
      * {@link net.minecraft.creativetab.CreativeTabs} creative_tab,
      * {@link net.minecraft.block.material.Material} dec_material)</h2>
      *
-     * <p>{@link String} block_name: 指定方块名称</p>
-     * <p>{@link net.minecraft.creativetab.CreativeTabs} creative_tab: 指定方块的物品栏</p>
-     * <p>{@link net.minecraft.block.material.Material} dec_material: 指定方块的 material</p>
+     * @param name 指定的方块名称
+     * @param tab 指定的创造物品栏
+     * @param material 指定的物品材质
      *
      * @author gaksy
      * */
@@ -46,11 +46,9 @@ public class BlockBase extends Block {
      * <h2>BaseBlock({@link String} block_name,
      * {@link net.minecraft.creativetab.CreativeTabs} creative_tab)</h2>
      *
-     * <p>{@link String} block_name: 指定方块名称</p>
-     * <p>{@link net.minecraft.creativetab.CreativeTabs} creative_tab: 指定方块的物品栏</p>
-     *
      * <p>描述：Material默认为ROCK</p>
-     *
+     * @param name 指定的方块名称
+     * @param tab 指定的创造物品栏
      * @author gaksy
      * */
     public BlockBase(String name, CreativeTabs tab) {
@@ -62,28 +60,22 @@ public class BlockBase extends Block {
      * <h2>iniBaseBlock({@link String} block_name,
      * {@link net.minecraft.creativetab.CreativeTabs} creative_tab)</h2>
      *
-     * <p>{@link String} block_name: 指定方块名称</p>
-     * <p>{@link net.minecraft.creativetab.CreativeTabs} creative_tab: 指定方块的物品栏/p>
-     *
      * <p>描述：标准Inception物品的初始化流程</p>
-     *
+     * @param name 指定方块的名称
+     * @param tab 指定的创造物品栏
      * @author gaksy
      * */
     private void init(String name, CreativeTabs tab) {
-        this.name = name;                       //存储block name
-        setRegistryName(Reference.MODID, name);       //设置其注册名称 示例：cbmod::block_name
-        setUnlocalizedName(name + "_unlocalized");    //设置本地化键名 示例：block_name_unlocalized
+        this.name = name;                                //存储block name
+        setRegistryName(Reference.MODID, name);          //设置其注册名称 示例：cbmod::block_name
+        setUnlocalizedName(name + "_unlocalized");       //设置本地化键名 示例：block_name_unlocalized
         setCreativeTab(tab);                             //设置方块所在的创造模式物品栏
         RegistryHandler.addBlock(name, this);      //将自身添加到注册列表
     }
 
     /**
      * <h2>getBlockName()</h2>
-     *
-     * <p>return {@link String}: 方块名称</p>
-     *
-     * <p>描述：返回方块的名称</p>
-     *
+     * @return 方块的名称
      * @author gaksy
      * */
     public String getName() {

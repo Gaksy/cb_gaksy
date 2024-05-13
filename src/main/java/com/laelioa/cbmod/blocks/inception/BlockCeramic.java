@@ -42,6 +42,10 @@ public class BlockCeramic extends BlockPropertyInteger {
         super("inc_ceramic", ComfortBox.incTab, TYPE, 9);
     }
 
+    /**
+     * <h2>createBlockState #898</h2>
+     * 创建方块状态
+     * */
     @Nonnull
     @Override
     protected BlockStateContainer createBlockState() {

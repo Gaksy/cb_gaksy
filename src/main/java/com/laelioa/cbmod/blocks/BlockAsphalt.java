@@ -42,6 +42,9 @@ import javax.annotation.ParametersAreNonnullByDefault;
  *     [teamcovertdragon docs] Block States |
  *     <a href="https://teamcovertdragon.github.io/Harbinger/63/chapter-05/block-state.html">zh-cn</a>
  * </p>
+ *
+ * <p>Goto {@link BlockAsphalt#AsphaltType}方块枚举</p>
+ *
  * @author RMSCA
  * */
 public class BlockAsphalt extends BlockBase {
@@ -66,7 +69,7 @@ public class BlockAsphalt extends BlockBase {
         return new BlockStateContainer(this, TYPE);
     }
 
-    /**<h2>getStateFromMeta</h2>
+    /**<h2>getStateFromMeta #191</h2>
      * 用于将序列化方块状态的值转换为方块的meta。
      * @author RMSCA
      * */
@@ -78,7 +81,7 @@ public class BlockAsphalt extends BlockBase {
     }
 
     /**
-     * <h2>getMetaFromState</h2>
+     * <h2>getMetaFromState #196</h2>
      * 用于将方块的meta转换为序列化方块状态的值
      * @author RMSCA
      * */
@@ -88,7 +91,7 @@ public class BlockAsphalt extends BlockBase {
     }
 
     /**
-     * <h2>getSubBlocks</h2>
+     * <h2>getSubBlocks #835</h2>
      * <p>returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)</p>
      * <p>返回具有相同ID但不同元数据（例如：wood返回4个方块）的方块列表。</p>
      * @author RMSCA
@@ -100,6 +103,22 @@ public class BlockAsphalt extends BlockBase {
             items.add(new ItemStack(this, 1, type.ordinal()));
             //ordinal 返回当前type的序列化值
         }
+    }
+
+    /**
+     * <h2>getPickBlock #1588</h2>
+     * Called when a user uses the creative pick block button on this block
+     *
+     * @param target The full target the player is looking at
+     * @return A ItemStack to add to the player's inventory, empty itemstack if nothing should be added.
+     * @author RMSCA
+     * */
+    @Nonnull
+    @ParametersAreNonnullByDefault
+    @Override
+    public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
+        state.getBlock();
+        return new ItemStack(this, 1, getMetaFromState(state));
     }
 
     /**
@@ -126,16 +145,5 @@ public class BlockAsphalt extends BlockBase {
         }
     }
 
-    /**
-     * <h2>getPickBlock</h2>
-     * 这个方法的作用是给创造模式鼠标中键选择方块提供物品，注意state
-     * @author RMSCA
-     * */
-    @Nonnull
-    @ParametersAreNonnullByDefault
-    @Override
-    public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-        state.getBlock();
-        return new ItemStack(this, 1, getMetaFromState(state));
-    }
+
 }

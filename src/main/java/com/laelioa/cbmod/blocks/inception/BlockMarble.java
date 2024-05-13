@@ -43,7 +43,7 @@ public class BlockMarble extends BlockBase {
         return new BlockStateContainer(this, TYPE);
     }
 
-    /**<h2>getStateFromMeta</h2>
+    /**<h2>getStateFromMeta #191</h2>
      * 用于将序列化方块状态的值转换为方块的meta。
      * @author RMSCA
      * */
@@ -55,7 +55,7 @@ public class BlockMarble extends BlockBase {
     }
 
     /**
-     * <h2>getMetaFromState</h2>
+     * <h2>getMetaFromState #196</h2>
      * 用于将方块的meta转换为序列化方块状态的值
      * @author RMSCA
      * */
@@ -65,7 +65,7 @@ public class BlockMarble extends BlockBase {
     }
 
     /**
-     * <h2>getSubBlocks</h2>
+     * <h2>getSubBlocks #835</h2>
      * <p>returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)</p>
      * <p>返回具有相同ID但不同元数据（例如：wood返回4个方块）的方块列表。</p>
      * @author RMSCA
@@ -78,6 +78,14 @@ public class BlockMarble extends BlockBase {
         }
     }
 
+    /**
+     * <h2>getPickBlock #1588</h2>
+     * Called when a user uses the creative pick block button on this block
+     *
+     * @param target The full target the player is looking at
+     * @return A ItemStack to add to the player's inventory, empty itemstack if nothing should be added.
+     * @author RMSCA
+     * */
     @Nonnull
     @ParametersAreNonnullByDefault
     @Override

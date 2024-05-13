@@ -43,6 +43,10 @@ public class BlockCarpet0 extends BlockPropertyInteger {
         super("inc_carpet0", ComfortBox.incTab, TYPE, 1);
     }
 
+    /**
+     * <h2>createBlockState #898</h2>
+     * 创建方块状态
+     * */
     @Nonnull
     @Override
     protected BlockStateContainer createBlockState() {
