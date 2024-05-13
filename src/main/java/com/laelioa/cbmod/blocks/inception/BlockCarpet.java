@@ -1,7 +1,7 @@
 package com.laelioa.cbmod.blocks.inception;
 
 import com.laelioa.cbmod.ComfortBox;
-import com.laelioa.cbmod.blocks.BlockBaseStatuePropertyInteger;
+import com.laelioa.cbmod.blocks.BlockPropertyInteger;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 
@@ -35,16 +35,17 @@ import javax.annotation.Nonnull;
  * </p>
  * @author RMSCA
  * */
-public class BlockCarpet extends BlockBaseStatuePropertyInteger {
-    private final static PropertyInteger STATUS_TYPE = PropertyInteger.create("type", 0, 15);
+public class BlockCarpet extends BlockPropertyInteger {
+    private final static PropertyInteger TYPE = PropertyInteger.create("type", 0, 15);
+
     public BlockCarpet() {
-        super("inc_carpet", ComfortBox.incTab, STATUS_TYPE, 15);
+        super("inc_carpet", ComfortBox.incTab, TYPE, 15);
     }
 
     @Nonnull
     @Override
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, STATUS_TYPE);
+        return new BlockStateContainer(this, TYPE);
     }
 }
 

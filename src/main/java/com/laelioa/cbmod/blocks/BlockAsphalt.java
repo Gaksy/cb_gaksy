@@ -109,7 +109,8 @@ public class BlockAsphalt extends BlockBase {
     public enum AsphaltType implements IStringSerializable {
         DEFAULT, NEW, WHITE, YELLOW, WHITE_LINE, YELLOW_LINE,
         DOUBLE_WHITE_LINE, DOUBLE_YELLOW_LINE,
-        SLANTED_WHITE_LINE, SLANTED_YELLOW_LINE, SLANTED_DOUBLE_WHITE_LINE, SLANTED_DOUBLE_YELLOW_LINE;
+        SLANTED_WHITE_LINE, SLANTED_YELLOW_LINE, SLANTED_DOUBLE_WHITE_LINE,
+        SLANTED_DOUBLE_YELLOW_LINE;
 
         public static AsphaltType byMetadata(int meta) {
             if (meta < 0 || meta >= values().length) {

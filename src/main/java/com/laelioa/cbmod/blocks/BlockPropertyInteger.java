@@ -19,10 +19,9 @@ import javax.annotation.ParametersAreNonnullByDefault;
  * <p>在构造参数种必须传递PropertyInteger与其最大数量</p>
  * @author gaksy
  * */
-public class BlockBaseStatuePropertyInteger extends BlockBase {
-    private final PropertyInteger STATUS_TYPE;
-    private final int STATUS_NUM;
-
+public class BlockPropertyInteger extends BlockBase {
+    private final PropertyInteger TYPE;
+    private final int MAX_STATES;
 
     /**
      * <h2>BlockBaseStatuePropertyInteger({@link String} block_name,
@@ -37,10 +36,10 @@ public class BlockBaseStatuePropertyInteger extends BlockBase {
      *
      * @author gaksy
      * */
-    public BlockBaseStatuePropertyInteger(String block_name, CreativeTabs creative_tab, PropertyInteger STATUE_TYPE, int max){
-        super(block_name, creative_tab);
-        this.STATUS_TYPE = STATUE_TYPE;
-        STATUS_NUM = max + 1;
+    public BlockPropertyInteger(String name, CreativeTabs tab, PropertyInteger TYPE, int maxStates) {
+        super(name, tab);
+        this.TYPE = TYPE;
+        MAX_STATES = maxStates + 1;
     }
 
     /**<h2>getStateFromMeta</h2>
@@ -51,7 +50,7 @@ public class BlockBaseStatuePropertyInteger extends BlockBase {
     @Override
     @SuppressWarnings("deprecation")
     public IBlockState getStateFromMeta(int meta) {
-        return getDefaultState().withProperty(STATUS_TYPE, meta);
+        return getDefaultState().withProperty(TYPE, meta);
     }
 
     /**
@@ -61,7 +60,7 @@ public class BlockBaseStatuePropertyInteger extends BlockBase {
      * */
     @Override
     public int getMetaFromState(IBlockState state) {
-        return state.getValue(STATUS_TYPE);
+        return state.getValue(TYPE);
     }
 
     /**
@@ -74,7 +73,7 @@ public class BlockBaseStatuePropertyInteger extends BlockBase {
     @Override
     public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items) {
         //meta在C++/C中返回了一个临时变量，会多占用一个int类型的空间，++meta则返回引用，仅一个指针大小，不知道Java里有没有这样的区别。
-        for (int meta = 0; meta < STATUS_NUM; meta++) {
+        for (int meta = 0; meta < MAX_STATES; meta++) {
             items.add(new ItemStack(this, 1, meta));
         }
     }

@@ -29,9 +29,9 @@ import javax.annotation.Nonnull;
 public class ItemBlockBase extends ItemBlock {
     public ItemBlockBase(BlockBase block, boolean hasSubTypes) {
         super(block);
-        setRegistryName(Reference.MODID, block.getBlockName());         //设置注册名称
+        setRegistryName(Reference.MODID, block.getName());         //设置注册名称
         setHasSubtypes(hasSubTypes);                                      //设置...
-        RegistryHandler.addItem(block.getBlockName(), this);    //将物品添加到注册列表
+        RegistryHandler.addItem(block.getName(), this);    //将物品添加到注册列表
     }
 
     @Override

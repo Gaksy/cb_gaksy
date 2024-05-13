@@ -38,9 +38,25 @@ import java.util.Map;
  * */
 @Mod.EventBusSubscriber(modid = Reference.MODID)
 public class RegistryHandler {
-
     private static final Map<String, Block> BLOCKS = new HashMap<>();
     private static final Map<String, Item> ITEMS = new HashMap<>();
+
+    @SubscribeEvent
+    public static void registerBlocks(RegistryEvent.Register<Block> event) {
+        CbBlocks.registerBlocks(event.getRegistry());                           //额外的需要注册的方块
+        event.getRegistry().registerAll(getBlocks().toArray(new Block[0]));     //注册所有在列表里的方块
+    }
+
+    @SubscribeEvent
+    public static void registerItems(RegistryEvent.Register<Item> event) {
+        CbBlocks.registerItemBlocks(event.getRegistry());                       //额外的需要注册的物品
+        event.getRegistry().registerAll(getItems().toArray(new Item[0]));       //注册所有在列表里的物品
+    }
+
+    @SubscribeEvent
+    public static void registerModels(ModelRegistryEvent event) {
+        ComfortBox.proxy.registerBlockModels();
+    }
 
     /**
      * <h2>addBlock({@link String} block_name, {@link net.minecraft.block.Block} dec_block)</h2>
@@ -52,9 +68,9 @@ public class RegistryHandler {
      *
      * @author gaksy
      * */
-    public static void addBlock(String block_name, Block dec_block){
-        if(!BLOCKS.containsKey(block_name)){
-            BLOCKS.put(block_name, dec_block);
+    public static void addBlock(String name, Block block) {
+        if(!BLOCKS.containsKey(name)) {
+            BLOCKS.put(name, block);
         }
     }
 
@@ -68,9 +84,9 @@ public class RegistryHandler {
      *
      * @author gaksy
      * */
-    public static void addItem(String item_name, Item dec_item){
-        if (!ITEMS.containsKey(item_name)) {
-            ITEMS.put(item_name, dec_item);
+    public static void addItem(String name, Item item) {
+        if (!ITEMS.containsKey(name)) {
+            ITEMS.put(name, item);
         }
     }
 
@@ -81,12 +97,12 @@ public class RegistryHandler {
      *
      * @author gaksy
      * */
-    public static List<Block> getBlocks(){
-        List<Block> block_list = new ArrayList<>();
-        for (String block_name : BLOCKS.keySet()){
-            block_list.add(BLOCKS.get(block_name));
+    public static List<Block> getBlocks() {
+        List<Block> list = new ArrayList<>();
+        for (String name : BLOCKS.keySet()) {
+            list.add(BLOCKS.get(name));
         }
-        return block_list;
+        return list;
     }
 
     /**
@@ -96,28 +112,11 @@ public class RegistryHandler {
      *
      * @author gaksy
      * */
-    public static List<Item> getItems(){
-        List<Item> item_list = new ArrayList<>();
-        for (String item_name : ITEMS.keySet()){
-            item_list.add(ITEMS.get(item_name));
+    public static List<Item> getItems() {
+        List<Item> list = new ArrayList<>();
+        for (String name : ITEMS.keySet()) {
+            list.add(ITEMS.get(name));
         }
-        return item_list;
-    }
-
-    @SubscribeEvent
-    public static void registerBlocks(RegistryEvent.Register<Block> event) {
-        CbObjects.registerBlocks(event.getRegistry());                           //额外的需要注册的方块
-        event.getRegistry().registerAll(getBlocks().toArray(new Block[0]));     //注册所有在列表里的方块
-    }
-
-    @SubscribeEvent
-    public static void registerItems(RegistryEvent.Register<Item> event) {
-        CbObjects.registerItemBlocks(event.getRegistry());                       //额外的需要注册的物品
-        event.getRegistry().registerAll(getItems().toArray(new Item[0]));       //注册所有在列表里的物品
-    }
-
-    @SubscribeEvent
-    public static void registerModels(ModelRegistryEvent event) {
-        ComfortBox.proxy.registerBlockModels();
+        return list;
     }
 }

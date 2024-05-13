@@ -1,7 +1,7 @@
 package com.laelioa.cbmod.items.inception;
 
 import com.laelioa.cbmod.blocks.inception.BlockMarble;
-import com.laelioa.cbmod.init.CbObjects;
+import com.laelioa.cbmod.init.CbBlocks;
 import com.laelioa.cbmod.items.ItemBlockBase;
 import net.minecraft.item.ItemStack;
 
@@ -14,7 +14,7 @@ import javax.annotation.Nonnull;
  * */
 public class ItemBlockMarble extends ItemBlockBase {
     public ItemBlockMarble() {
-        super(CbObjects.BLOCK_INC_MARBLE, true);
+        super(CbBlocks.INC_MARBLE, true);
     }
 
     @Nonnull

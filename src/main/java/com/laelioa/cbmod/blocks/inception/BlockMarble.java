@@ -78,14 +78,8 @@ public class BlockMarble extends BlockBase {
      * <h2>大理石方块的状态</h2>
      * */
     public enum MarbleType implements IStringSerializable {
-        DEFAULT,
-        WHITE,
-        BLACK,
-        BLUE,
-        GRAY,
-        ROUGH_BLACK,
-        DARK_GRAY,
-        RANDOM;
+        DEFAULT, WHITE, BLACK, BLUE, GRAY,
+        ROUGH_BLACK, DARK_GRAY, RANDOM;
 
         public static MarbleType byMetadata(int meta) {
             if (meta < 0 || meta >= values().length) {

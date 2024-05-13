@@ -1,6 +1,6 @@
 package com.laelioa.cbmod.items.inception;
 
-import com.laelioa.cbmod.init.CbObjects;
+import com.laelioa.cbmod.init.CbBlocks;
 import com.laelioa.cbmod.items.ItemBlockBase;
 
 /**
@@ -10,6 +10,6 @@ import com.laelioa.cbmod.items.ItemBlockBase;
  * */
 public class ItemBlockConcrete extends ItemBlockBase {
     public ItemBlockConcrete() {
-        super(CbObjects.BLOCK_INC_CONCRETE, true);
+        super(CbBlocks.INC_CONCRETE, true);
     }
 }

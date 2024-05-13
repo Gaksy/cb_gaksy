@@ -1,7 +1,7 @@
 package com.laelioa.cbmod.items;
 
 import com.laelioa.cbmod.blocks.BlockAsphalt;
-import com.laelioa.cbmod.init.CbObjects;
+import com.laelioa.cbmod.init.CbBlocks;
 import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nonnull;
@@ -13,7 +13,7 @@ import javax.annotation.Nonnull;
  * */
 public class ItemBlockAsphalt extends ItemBlockBase {
     public ItemBlockAsphalt() {
-        super(CbObjects.BLOCK_ASPHALT, true);
+        super(CbBlocks.ASPHALT, true);
     }
 
     @Nonnull

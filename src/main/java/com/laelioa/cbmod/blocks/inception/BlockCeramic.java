@@ -1,7 +1,7 @@
 package com.laelioa.cbmod.blocks.inception;
 
 import com.laelioa.cbmod.ComfortBox;
-import com.laelioa.cbmod.blocks.BlockBaseStatuePropertyInteger;
+import com.laelioa.cbmod.blocks.BlockPropertyInteger;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 
@@ -35,15 +35,16 @@ import javax.annotation.Nonnull;
  * </p>
  * @author RMSCA
  * */
-public class BlockCeramic extends BlockBaseStatuePropertyInteger {
-    private final static PropertyInteger STATUS_TYPE = PropertyInteger.create("type", 0, 9);
+public class BlockCeramic extends BlockPropertyInteger {
+    private final static PropertyInteger TYPE = PropertyInteger.create("type", 0, 9);
+
     public BlockCeramic() {
-        super("inc_ceramic", ComfortBox.incTab, STATUS_TYPE, 9);
+        super("inc_ceramic", ComfortBox.incTab, TYPE, 9);
     }
 
     @Nonnull
     @Override
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, STATUS_TYPE);
+        return new BlockStateContainer(this, TYPE);
     }
 }
