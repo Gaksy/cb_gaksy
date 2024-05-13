@@ -6,9 +6,13 @@ import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -72,6 +76,14 @@ public class BlockMarble extends BlockBase {
         for (MarbleType type : MarbleType.values()) {
             items.add(new ItemStack(this, 1, type.ordinal()));
         }
+    }
+
+    @Nonnull
+    @ParametersAreNonnullByDefault
+    @Override
+    public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
+        state.getBlock();
+        return new ItemStack(this, 1, getMetaFromState(state));
     }
 
     /**
