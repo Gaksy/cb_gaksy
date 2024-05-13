@@ -36,7 +36,6 @@ public class ComfortBox {
 
     public static CreativeTabs roadTab = new CbTab("road");
     public static CreativeTabs incTab = new CbTab("inc");
-    public static CreativeTabs testTab = new CbTab("test");
 
 
     /**
