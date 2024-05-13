@@ -1,29 +1,25 @@
 package com.laelioa.cbmod.items.inception;
 
-import com.laelioa.cbmod.Reference;
 import com.laelioa.cbmod.blocks.inception.BlockMarble;
 import com.laelioa.cbmod.init.CbBlocks;
-import net.minecraft.item.ItemBlock;
+import com.laelioa.cbmod.items.ItemBlockBase;
 import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nonnull;
 
-public class ItemBlockMarble extends ItemBlock {
+/**
+ * <h2>ItemBlockMarble</h2>
+ * 大理石
+ * @author RMSCA
+ * */
+public class ItemBlockMarble extends ItemBlockBase {
     public ItemBlockMarble() {
-        super(CbBlocks.INC_MARBLE);
-        setRegistryName(Reference.MODID, "inc_marble");
-        setHasSubtypes(true);
-    }
-
-    @Override
-    public int getMetadata(int meta) {
-        return meta;
+        super(CbBlocks.INC_MARBLE, true);
     }
 
     @Nonnull
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return super.getUnlocalizedName() + "." +
-                BlockMarble.MarbleType.byMetadata(stack.getMetadata()).getName();
+        return super.getUnlocalizedName() + "." + BlockMarble.MarbleType.byMetadata(stack.getMetadata()).getName();
     }
 }

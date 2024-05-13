@@ -1,27 +1,15 @@
 package com.laelioa.cbmod.items.inception;
 
-import com.laelioa.cbmod.Reference;
 import com.laelioa.cbmod.init.CbBlocks;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
+import com.laelioa.cbmod.items.ItemBlockBase;
 
-import javax.annotation.Nonnull;
-
-public class ItemBlockCarpet extends ItemBlock {
+/**
+ * <h2>ItemBlockCarpet</h2>
+ * 地毯
+ * @author RMSCA
+ * */
+public class ItemBlockCarpet extends ItemBlockBase {
     public ItemBlockCarpet() {
-        super(CbBlocks.INC_CARPET);
-        setRegistryName(Reference.MODID, "inc_carpet");
-        setHasSubtypes(true);
-    }
-
-    @Override
-    public int getMetadata(int meta) {
-        return meta;
-    }
-
-    @Nonnull
-    @Override
-    public String getUnlocalizedName(ItemStack stack) {
-        return super.getUnlocalizedName() + "_" + stack.getMetadata();
+        super(CbBlocks.INC_CARPET, true);
     }
 }

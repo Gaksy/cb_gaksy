@@ -1,56 +1,92 @@
 package com.laelioa.cbmod.init;
 
-import com.laelioa.cbmod.Reference;
+import com.laelioa.cbmod.ComfortBox;
 import com.laelioa.cbmod.blocks.BlockAsphalt;
+import com.laelioa.cbmod.blocks.BlockBase;
 import com.laelioa.cbmod.blocks.inception.*;
 import com.laelioa.cbmod.items.ItemBlockAsphalt;
+import com.laelioa.cbmod.items.ItemBlockBase;
 import com.laelioa.cbmod.items.inception.*;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.registries.IForgeRegistry;
 
+//BLOCK | INCEPTION
+//      | ROAD
+//
+//ITEM_BLOCK | INCEPTION
+//           | ROAD
+
+/**
+ * <h2>Class CbObject</h2>
+ * <p>该类负责将所有对象（方块、物品）进行初始化</p>
+ * <p>当方块或物品初始化后，他会自动调用Registrant，向其待注册列表添加对应的方块或物品，当注册事件触发后会自动注册</p>
+ *
+ * @author gaksy
+ * */
+@SuppressWarnings("unused")     //取消未使用警告
 public class CbBlocks {
-    // Road
-    public static final Block ASPHALT;
+    /**
+     * <h2>BLOCK/INCEPTION 初始化区域</h2>
+     * <p>Goto {@link CbBlocks#ITEM_INC_CARPET ITEM_BLOCK/INCEPTION}</p>
+     **/
+    //blocks.inception
+    public static final BlockBase INC_CARPET = new BlockCarpet();
+    public static final BlockBase INC_CARPET_0 = new BlockCarpet0();
+    public static final BlockBase INC_CERAMIC = new BlockCeramic();
+    public static final BlockBase INC_CONCRETE = new BlockConcrete();
+    public static final BlockBase INC_MARBLE = new BlockMarble();
+    public static final BlockBase INC_ASPHALT = new BlockBase("inc_asphalt", ComfortBox.incTab);
+    public static final BlockBase INC_FROSTED = new BlockBase("inc_frosted_block", ComfortBox.incTab);
 
-    // Inception
-    public static final Block INC_CARPET, INC_CARPET0, INC_MARBLE, INC_CONCRETE, INC_CERAMIC, INC_ASPHALT,
-            INC_FROSTED_BLOCK;
+    /**
+     * <h2>BLOCK/ROAD 初始化区域</h2>
+     * <p>Goto {@link CbBlocks#ITEM_ASPHALT ITEM_BLOCK/ROAD}</p>
+     **/
+    //blocks
+    public static final BlockBase ASPHALT = new BlockAsphalt();
 
-    static {
-        // Road
-        ASPHALT = new BlockAsphalt();
 
-        // Inception
-        INC_CARPET = new BlockCarpet();
-        INC_CARPET0 = new BlockCarpet0();
-        INC_MARBLE = new BlockMarble();
-        INC_CONCRETE = new BlockConcrete();
-        INC_CERAMIC = new BlockCeramic();
-        INC_ASPHALT = new BlockInception("inc_asphalt");
-        INC_FROSTED_BLOCK = new BlockInception("inc_frosted_block");
-    }
+    /**
+     * <h2>ITEM_BLOCK/INCEPTION 初始化区域</h2>
+     * <p>Goto {@link CbBlocks#INC_CARPET BLOCK/INCEPTION}</p>
+     **/
+    //items.inception
+    public static final ItemBlock ITEM_INC_CARPET = new ItemBlockCarpet();
+    public static final ItemBlock ITEM_INC_CARPET_0 = new ItemBlockCarpet0();
+    public static final ItemBlock ITEM_INC_CERAMIC = new ItemBlockCeramic();
+    public static final ItemBlock ITEM_INC_CONCRETE = new ItemBlockConcrete();
+    public static final ItemBlock ITEM_INC_MARBLE = new ItemBlockMarble();
+    public static final ItemBlock ITEM_INC_ASPHALT = new ItemBlockBase(INC_ASPHALT, false);
+    public static final ItemBlock ITEM_INC_FROSTED = new ItemBlockBase(INC_FROSTED, false);
 
-    public static void registerBlocks(IForgeRegistry<Block> registry) {
-        // Road
-        registry.register(ASPHALT);
+    /**
+     * <h2>ITEM_BLOCK/ROAD 初始化区域</h2>
+     * <p>Goto {@link CbBlocks#ASPHALT BLOCK/ROAD}</p>
+     **/
+    //items
+    public static final ItemBlockAsphalt ITEM_ASPHALT = new ItemBlockAsphalt();
 
-        // Inception
-        registry.registerAll(RegistryHandler.BLOCKS.toArray(new Block[0]));
-    }
+    /**
+     * <h2>registerBlocks({@link IForgeRegistry<Block>} registry)</h2>
+     *
+     * <p>{@link IForgeRegistry<Block>} registry: 方块注册表</p>
+     *
+     * <p>描述：额外需要注册的方块</p>
+     *
+     * @author gaksy
+     * */
+    public static void registerBlocks(IForgeRegistry<Block> registry) {}
 
-    public static void registerItemBlocks(IForgeRegistry<Item> registry) {
-        // Road
-        registry.register(new ItemBlockAsphalt());
-
-        // Inception
-        registry.register(new ItemBlockCarpet());
-        registry.register(new ItemBlockCarpet0());
-        registry.register(new ItemBlockMarble());
-        registry.register(new ItemBlockConcrete());
-        registry.register(new ItemBlockCeramic());
-        registry.register(new ItemBlock(INC_ASPHALT).setRegistryName(Reference.MODID, "inc_asphalt"));
-        registry.register(new ItemBlock(INC_FROSTED_BLOCK).setRegistryName(Reference.MODID, "inc_frosted_block"));
-    }
+    /**
+     * <h2>registerItemBlocks({@link IForgeRegistry<Item>} registry)</h2>
+     *
+     * <p>{@link IForgeRegistry<Item>} registry: 物品注册表</p>
+     *
+     * <p>描述：额外需要注册的物品</p>
+     *
+     * @author gaksy
+     * */
+    public static void registerItemBlocks(IForgeRegistry<Item> registry) {}
 }
