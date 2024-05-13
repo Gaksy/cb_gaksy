@@ -27,13 +27,11 @@ import javax.annotation.Nonnull;
  * @author gaksy
  * */
 public class ItemBlockBase extends ItemBlock {
-    public ItemBlockBase(BlockBase dec_block, boolean has_sub_types){
-        super(dec_block);
-
-        setRegistryName(Reference.MODID, dec_block.getBlockName());         //设置注册名称
-        setHasSubtypes(has_sub_types);                                      //设置...
-
-        RegistryHandler.addItem(dec_block.getBlockName(), this);    //将物品添加到注册列表
+    public ItemBlockBase(BlockBase block, boolean hasSubTypes) {
+        super(block);
+        setRegistryName(Reference.MODID, block.getBlockName());         //设置注册名称
+        setHasSubtypes(hasSubTypes);                                      //设置...
+        RegistryHandler.addItem(block.getBlockName(), this);    //将物品添加到注册列表
     }
 
     @Override
@@ -44,6 +42,6 @@ public class ItemBlockBase extends ItemBlock {
     @Nonnull
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return super.getUnlocalizedName() + "_" + stack.getMetadata();
+        return this.getHasSubtypes() ? super.getUnlocalizedName() + "_" + stack.getMetadata() : super.getUnlocalizedName();
     }
 }

@@ -56,8 +56,8 @@ public class CbObjects {
     public static final ItemBlockCeramic ITEM_BLOCK_INC_CERAMIC = new ItemBlockCeramic();
     public static final ItemBlockConcrete ITEM_BLOCK_INC_CONCRETE = new ItemBlockConcrete();
     public static final ItemBlockMarble ITEM_BLOCK_INC_MARBLE = new ItemBlockMarble();
-    public static final ItemBlockBase ITEM_BLOCK_INC_ASPHALT = new ItemBlockBase(BLOCK_INC_ASPHALT, true);
-    public static final ItemBlockBase ITEM_BLOCK_INC_FROSTED = new ItemBlockBase(BLOCK_INC_FROSTED, true);
+    public static final ItemBlockBase ITEM_BLOCK_INC_ASPHALT = new ItemBlockBase(BLOCK_INC_ASPHALT, false);
+    public static final ItemBlockBase ITEM_BLOCK_INC_FROSTED = new ItemBlockBase(BLOCK_INC_FROSTED, false);
 
     /**
      * <h2>ITEM_BLOCK/ROAD 初始化区域</h2>
