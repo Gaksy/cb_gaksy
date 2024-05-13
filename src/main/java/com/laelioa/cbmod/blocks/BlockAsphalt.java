@@ -3,18 +3,9 @@ package com.laelioa.cbmod.blocks;
 import com.laelioa.cbmod.ComfortBox;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
-import net.minecraft.util.NonNullList;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
 
 /**
  * <h2>Class BlockAsphalt</h2>
@@ -45,8 +36,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
  *
  * @author RMSCA
  * */
-public class BlockAsphalt extends BlockBase {
-
+public class BlockAsphalt extends BlockPropertyEnum<BlockAsphalt.AsphaltType> {
     /**
      * <h2>PropertyEnum&lt;E extends Enum&lt;E&gt;&gt;</h2>
      * 实现了 IProperty<E>, 定义可以采用Enum类列举的值的属性。 调用PropertyEnum.create("name", <enum_class>)来创建;
@@ -58,65 +48,13 @@ public class BlockAsphalt extends BlockBase {
     private static final PropertyEnum<AsphaltType> TYPE = PropertyEnum.create("type", AsphaltType.class);
 
     public BlockAsphalt() {
-        super("asphalt", ComfortBox.roadTab);
+        super("asphalt", ComfortBox.roadTab, TYPE);
     }
 
     @Nonnull
     @Override
     protected BlockStateContainer createBlockState() {
         return new BlockStateContainer(this, TYPE);
-    }
-
-    /**<h2>getStateFromMeta #191</h2>
-     * 用于将序列化方块状态的值转换为方块的meta。
-     * @author RMSCA
-     * */
-    @Nonnull
-    @Override
-    @SuppressWarnings("deprecation")
-    public IBlockState getStateFromMeta(int meta) {
-        return getDefaultState().withProperty(TYPE, AsphaltType.values()[meta]);
-    }
-
-    /**
-     * <h2>getMetaFromState #196</h2>
-     * 用于将方块的meta转换为序列化方块状态的值
-     * @author RMSCA
-     * */
-    @Override
-    public int getMetaFromState(IBlockState state) {
-        return state.getValue(TYPE).ordinal();
-    }
-
-    /**
-     * <h2>getSubBlocks #835</h2>
-     * <p>returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)</p>
-     * <p>返回具有相同ID但不同元数据（例如：wood返回4个方块）的方块列表。</p>
-     * @author RMSCA
-     * */
-    @ParametersAreNonnullByDefault
-    @Override
-    public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items) {
-        for (AsphaltType type : AsphaltType.values()) {
-            items.add(new ItemStack(this, 1, type.ordinal()));
-            //ordinal 返回当前type的序列化值
-        }
-    }
-
-    /**
-     * <h2>getPickBlock #1588</h2>
-     * Called when a user uses the creative pick block button on this block
-     *
-     * @param target The full target the player is looking at
-     * @return A ItemStack to add to the player's inventory, empty itemstack if nothing should be added.
-     * @author RMSCA
-     * */
-    @Nonnull
-    @ParametersAreNonnullByDefault
-    @Override
-    public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-        state.getBlock();
-        return new ItemStack(this, 1, getMetaFromState(state));
     }
 
     /**
@@ -142,6 +80,4 @@ public class BlockAsphalt extends BlockBase {
             return name().toLowerCase();
         }
     }
-
-
 }
