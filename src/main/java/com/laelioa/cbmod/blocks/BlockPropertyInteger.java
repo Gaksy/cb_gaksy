@@ -87,7 +87,6 @@ public class BlockPropertyInteger extends BlockBase {
     @ParametersAreNonnullByDefault
     @Override
     public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-        state.getBlock();
         return new ItemStack(this, 1, getMetaFromState(state));
     }
 }

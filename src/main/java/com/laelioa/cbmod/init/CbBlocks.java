@@ -9,6 +9,7 @@ import com.laelioa.cbmod.items.ItemBlockBase;
 import com.laelioa.cbmod.items.inception.*;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.registries.IForgeRegistry;
 
 //BLOCK | INCEPTION
@@ -51,13 +52,13 @@ public class CbBlocks {
      * <p>Goto {@link CbBlocks#INC_CARPET BLOCK/INCEPTION}</p>
      **/
     //items.inception
-    public static final ItemBlockBase ITEM_INC_CARPET = new ItemBlockCarpet();
-    public static final ItemBlockBase ITEM_INC_CARPET_0 = new ItemBlockCarpet0();
-    public static final ItemBlockBase ITEM_INC_CERAMIC = new ItemBlockCeramic();
-    public static final ItemBlockBase ITEM_INC_CONCRETE = new ItemBlockConcrete();
-    public static final ItemBlockBase ITEM_INC_MARBLE = new ItemBlockMarble();
-    public static final ItemBlockBase ITEM_INC_ASPHALT = new ItemBlockBase(INC_ASPHALT, false);
-    public static final ItemBlockBase ITEM_INC_FROSTED = new ItemBlockBase(INC_FROSTED, false);
+    public static final ItemBlock ITEM_INC_CARPET = new ItemBlockCarpet();
+    public static final ItemBlock ITEM_INC_CARPET_0 = new ItemBlockCarpet0();
+    public static final ItemBlock ITEM_INC_CERAMIC = new ItemBlockCeramic();
+    public static final ItemBlock ITEM_INC_CONCRETE = new ItemBlockConcrete();
+    public static final ItemBlock ITEM_INC_MARBLE = new ItemBlockMarble();
+    public static final ItemBlock ITEM_INC_ASPHALT = new ItemBlockBase(INC_ASPHALT, false);
+    public static final ItemBlock ITEM_INC_FROSTED = new ItemBlockBase(INC_FROSTED, false);
 
     /**
      * <h2>ITEM_BLOCK/ROAD 初始化区域</h2>

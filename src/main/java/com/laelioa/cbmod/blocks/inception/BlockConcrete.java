@@ -39,7 +39,7 @@ public class BlockConcrete extends BlockPropertyInteger {
     private final static PropertyInteger TYPE = PropertyInteger.create("type", 0, 7);
 
     public BlockConcrete() {
-        super("inc_concrete", ComfortBox.incTab, TYPE,7);
+        super("inc_concrete", ComfortBox.incTab, TYPE, 7);
     }
 
     @Nonnull
