@@ -9,6 +9,8 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
+
+
 /**
  * <h2>参考文档</h2>
  * <p><a href="https://blog.csdn.net/GAA775/article/details/118220023">[csdn] Minecragt 1.12.2 Mod Forge 开发帮助文档</a></p>
@@ -21,6 +23,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
 public class ComfortBox {
+    @Mod.Instance(Reference.MODID)
+    public static ComfortBox instance;
     /**
      * <h2>根据物理端类型实例化其中一个对应的类</h2>
      * <p>参考文档：</p>
@@ -51,7 +55,7 @@ public class ComfortBox {
     public void preInit(FMLPreInitializationEvent event) { proxy.preInit(); }
 
     @EventHandler
-    public void init(FMLInitializationEvent event) { proxy.init(); }
+    public void init(FMLInitializationEvent event) { proxy.init(event); }
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) { proxy.postInit(); }

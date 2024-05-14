@@ -9,6 +9,7 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
 public class ClientProxy extends CommonProxy {
 
@@ -24,7 +25,7 @@ public class ClientProxy extends CommonProxy {
     public void preInit() { super.preInit(); }
 
     @Override
-    public void init() { super.init(); }
+    public void init(FMLInitializationEvent event) { super.init(event); }
 
     @Override
     public void postInit() {

@@ -4,6 +4,11 @@ import com.laelioa.cbmod.ComfortBox;
 import com.laelioa.cbmod.blocks.BlockPropertyInteger;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
 
@@ -50,6 +55,16 @@ public class BlockCarpet extends BlockPropertyInteger {
     @Override
     protected BlockStateContainer createBlockState() {
         return new BlockStateContainer(this, TYPE);
+    }
+
+    @Override
+    public AxisAlignedBB getSelectedBoundingBox(IBlockState state, World worldIn, BlockPos pos) {
+        return new AxisAlignedBB(1.0D,1.0D,1.0D,1.0D,1.0D,1.D);
+    }
+
+    @Override
+    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
+       return new AxisAlignedBB(0.375D, 0.0D, 0.625D, 0.625D, 1.5D, 1.0D);
     }
 }
 

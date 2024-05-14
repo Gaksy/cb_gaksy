@@ -6,7 +6,9 @@ import com.laelioa.cbmod.blocks.BlockBase;
 import com.laelioa.cbmod.blocks.inception.*;
 import com.laelioa.cbmod.items.ItemBlockAsphalt;
 import com.laelioa.cbmod.items.ItemBlockBase;
+import com.laelioa.cbmod.items.ItemStartGui;
 import com.laelioa.cbmod.items.inception.*;
+import mcp.client.Start;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -27,6 +29,8 @@ import net.minecraftforge.registries.IForgeRegistry;
  * */
 @SuppressWarnings("unused")     //取消未使用警告
 public class CbBlocks {
+    public static final Item START_GUI = new ItemStartGui();
+
     /**
      * <h2>BLOCK/INCEPTION 初始化区域</h2>
      * <p>Goto {@link CbBlocks#ITEM_INC_CARPET ITEM_BLOCK/INCEPTION}</p>
