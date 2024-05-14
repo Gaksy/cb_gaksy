@@ -37,6 +37,7 @@ public class CbBlocks {
     public static final BlockBase INC_CERAMIC = new BlockCeramic();
     public static final BlockBase INC_CONCRETE = new BlockConcrete();
     public static final BlockBase INC_MARBLE = new BlockMarble();
+    public static final BlockBase INC_FLOOR = new BlockFloor();
     public static final BlockBase INC_ASPHALT = new BlockBase("inc_asphalt", ComfortBox.incTab);
     public static final BlockBase INC_FROSTED_BLOCK = new BlockBase("inc_frosted_block", ComfortBox.incTab);
     public static final BlockBase INC_DECK = new BlockBase("inc_deck", ComfortBox.incTab);
@@ -59,6 +60,7 @@ public class CbBlocks {
     public static final ItemBlock ITEM_INC_CERAMIC = new ItemBlockCeramic();
     public static final ItemBlock ITEM_INC_CONCRETE = new ItemBlockConcrete();
     public static final ItemBlock ITEM_INC_MARBLE = new ItemBlockMarble();
+    public static final ItemBlock ITEM_INC_FLOOR = new ItemBlockBase(INC_FLOOR, true);
     public static final ItemBlock ITEM_INC_ASPHALT = new ItemBlockBase(INC_ASPHALT, false);
     public static final ItemBlock ITEM_INC_FROSTED = new ItemBlockBase(INC_FROSTED_BLOCK, false);
     public static final ItemBlock ITEM_INC_DECK = new ItemBlockBase(INC_DECK, false);

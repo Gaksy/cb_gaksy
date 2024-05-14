@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "type=0": { "model": "cbmod:inception/floor/inc_floor_0_model" },
+    "type=1": { "model": "cbmod:inception/floor/inc_floor_1_model" }
+  }
+}

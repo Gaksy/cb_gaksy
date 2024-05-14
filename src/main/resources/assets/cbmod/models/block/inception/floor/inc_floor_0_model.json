@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "cbmod:blocks/inception/floor/inc_floor_0"
+  }
+}
