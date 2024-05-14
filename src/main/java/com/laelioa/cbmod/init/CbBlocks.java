@@ -55,10 +55,10 @@ public class CbBlocks {
      * <p>Goto {@link CbBlocks#INC_CARPET BLOCK/INCEPTION}</p>
      **/
     //items.inception
-    public static final ItemBlock ITEM_INC_CARPET = new ItemBlockCarpet();
-    public static final ItemBlock ITEM_INC_CARPET_0 = new ItemBlockCarpet0();
-    public static final ItemBlock ITEM_INC_CERAMIC = new ItemBlockCeramic();
-    public static final ItemBlock ITEM_INC_CONCRETE = new ItemBlockConcrete();
+    public static final ItemBlock ITEM_INC_CARPET = new ItemBlockBase(INC_CARPET, true);
+    public static final ItemBlock ITEM_INC_CARPET_0 = new ItemBlockBase(INC_CARPET_0, true);
+    public static final ItemBlock ITEM_INC_CERAMIC = new ItemBlockBase(INC_CERAMIC, true);
+    public static final ItemBlock ITEM_INC_CONCRETE = new ItemBlockBase(INC_CONCRETE, true);
     public static final ItemBlock ITEM_INC_MARBLE = new ItemBlockMarble();
     public static final ItemBlock ITEM_INC_FLOOR = new ItemBlockBase(INC_FLOOR, true);
     public static final ItemBlock ITEM_INC_ASPHALT = new ItemBlockBase(INC_ASPHALT, false);
