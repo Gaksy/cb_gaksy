@@ -38,7 +38,8 @@ public class CbBlocks {
     public static final BlockBase INC_CONCRETE = new BlockConcrete();
     public static final BlockBase INC_MARBLE = new BlockMarble();
     public static final BlockBase INC_ASPHALT = new BlockBase("inc_asphalt", ComfortBox.incTab);
-    public static final BlockBase INC_FROSTED = new BlockBase("inc_frosted_block", ComfortBox.incTab);
+    public static final BlockBase INC_FROSTED_BLOCK = new BlockBase("inc_frosted_block", ComfortBox.incTab);
+    public static final BlockBase INC_DECK = new BlockBase("inc_deck", ComfortBox.incTab);
 
     /**
      * <h2>BLOCK/ROAD 初始化区域</h2>
@@ -59,7 +60,8 @@ public class CbBlocks {
     public static final ItemBlock ITEM_INC_CONCRETE = new ItemBlockConcrete();
     public static final ItemBlock ITEM_INC_MARBLE = new ItemBlockMarble();
     public static final ItemBlock ITEM_INC_ASPHALT = new ItemBlockBase(INC_ASPHALT, false);
-    public static final ItemBlock ITEM_INC_FROSTED = new ItemBlockBase(INC_FROSTED, false);
+    public static final ItemBlock ITEM_INC_FROSTED = new ItemBlockBase(INC_FROSTED_BLOCK, false);
+    public static final ItemBlock ITEM_INC_DECK = new ItemBlockBase(INC_DECK, false);
 
     /**
      * <h2>ITEM_BLOCK/ROAD 初始化区域</h2>

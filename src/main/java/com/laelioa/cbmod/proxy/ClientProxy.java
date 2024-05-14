@@ -63,7 +63,8 @@ public class ClientProxy extends CommonProxy {
         }
 
         registerModel("inception/inc_asphalt", CbBlocks.INC_ASPHALT, 0);
-        registerModel("inception/inc_frosted_block", CbBlocks.INC_FROSTED, 0);
+        registerModel("inception/inc_frosted_block", CbBlocks.INC_FROSTED_BLOCK, 0);
+        registerModel("inception/inc_deck", CbBlocks.INC_DECK, 0);
     }
 
     /**
