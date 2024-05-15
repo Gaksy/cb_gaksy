@@ -39,7 +39,7 @@ public class BlockCeramic extends BlockPropertyInteger {
     private final static PropertyInteger TYPE = PropertyInteger.create("type", 0, 9);
 
     public BlockCeramic() {
-        super("inc_ceramic", ComfortBox.incTab, TYPE, 9);
+        super("inc_ceramic", ComfortBox.incTab, TYPE, 9, "inception/ceramic/inc_ceramic_");
     }
 
     /**

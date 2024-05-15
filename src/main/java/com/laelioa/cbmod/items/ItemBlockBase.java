@@ -3,6 +3,7 @@ package com.laelioa.cbmod.items;
 import com.laelioa.cbmod.Reference;
 import com.laelioa.cbmod.blocks.BlockBase;
 import com.laelioa.cbmod.init.RegistryHandler;
+import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
@@ -27,11 +28,11 @@ import javax.annotation.Nonnull;
  * @author gaksy
  * */
 public class ItemBlockBase extends ItemBlock {
-    public ItemBlockBase(BlockBase block, boolean hasSubTypes) {
+    public ItemBlockBase(Block block, boolean hasSubTypes) {
         super(block);
-        setRegistryName(Reference.MODID, block.getName());         //设置注册名称
+        setRegistryName(Reference.MODID, ((BlockBase)block).getName());         //设置注册名称
         setHasSubtypes(hasSubTypes);                                      //设置...
-        RegistryHandler.addItem(block.getName(), this);    //将物品添加到注册列表
+        RegistryHandler.addItem(((BlockBase)block).getName(), this);    //将物品添加到注册列表
     }
 
     @Override

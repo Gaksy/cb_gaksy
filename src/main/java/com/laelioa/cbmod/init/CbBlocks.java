@@ -32,15 +32,15 @@ public class CbBlocks {
      * <p>Goto {@link CbBlocks#ITEM_INC_CARPET ITEM_BLOCK/INCEPTION}</p>
      **/
     //blocks.inception
-    public static final BlockBase INC_CARPET = new BlockCarpet();
-    public static final BlockBase INC_CARPET_0 = new BlockCarpet0();
-    public static final BlockBase INC_CERAMIC = new BlockCeramic();
-    public static final BlockBase INC_CONCRETE = new BlockConcrete();
-    public static final BlockBase INC_MARBLE = new BlockMarble();
-    public static final BlockBase INC_FLOOR = new BlockFloor();
-    public static final BlockBase INC_ASPHALT = new BlockBase("inc_asphalt", ComfortBox.incTab);
-    public static final BlockBase INC_FROSTED_BLOCK = new BlockBase("inc_frosted_block", ComfortBox.incTab);
-    public static final BlockBase INC_DECK = new BlockBase("inc_deck", ComfortBox.incTab);
+    public static final Block INC_CARPET = new BlockCarpet();
+    public static final Block INC_CARPET_0 = new BlockCarpet0();
+    public static final Block INC_CERAMIC = new BlockCeramic();
+    public static final Block INC_CONCRETE = new BlockConcrete();
+    public static final Block INC_MARBLE = new BlockMarble();
+    public static final Block INC_FLOOR = new BlockFloor();
+    public static final Block INC_ASPHALT = new BlockBase("inc_asphalt", ComfortBox.incTab, "inception/inc_asphalt");
+    public static final Block INC_FROSTED_BLOCK = new BlockBase("inc_frosted_block", ComfortBox.incTab, "inception/inc_frosted_block");
+    public static final Block INC_DECK = new BlockBase("inc_deck", ComfortBox.incTab, "inception/inc_deck");
 
     /**
      * <h2>BLOCK/ROAD 初始化区域</h2>
@@ -55,15 +55,15 @@ public class CbBlocks {
      * <p>Goto {@link CbBlocks#INC_CARPET BLOCK/INCEPTION}</p>
      **/
     //items.inception
-    public static final ItemBlock ITEM_INC_CARPET = new ItemBlockBase(INC_CARPET, true);
-    public static final ItemBlock ITEM_INC_CARPET_0 = new ItemBlockBase(INC_CARPET_0, true);
-    public static final ItemBlock ITEM_INC_CERAMIC = new ItemBlockBase(INC_CERAMIC, true);
-    public static final ItemBlock ITEM_INC_CONCRETE = new ItemBlockBase(INC_CONCRETE, true);
-    public static final ItemBlock ITEM_INC_MARBLE = new ItemBlockMarble();
-    public static final ItemBlock ITEM_INC_FLOOR = new ItemBlockBase(INC_FLOOR, true);
-    public static final ItemBlock ITEM_INC_ASPHALT = new ItemBlockBase(INC_ASPHALT, false);
-    public static final ItemBlock ITEM_INC_FROSTED_BLOCK = new ItemBlockBase(INC_FROSTED_BLOCK, false);
-    public static final ItemBlock ITEM_INC_DECK = new ItemBlockBase(INC_DECK, false);
+    public static final Item ITEM_INC_CARPET = new ItemBlockBase(INC_CARPET, true);
+    public static final Item ITEM_INC_CARPET_0 = new ItemBlockBase(INC_CARPET_0, true);
+    public static final Item ITEM_INC_CERAMIC = new ItemBlockBase(INC_CERAMIC, true);
+    public static final Item ITEM_INC_CONCRETE = new ItemBlockBase(INC_CONCRETE, true);
+    public static final Item ITEM_INC_MARBLE = new ItemBlockMarble();
+    public static final Item ITEM_INC_FLOOR = new ItemBlockBase(INC_FLOOR, true);
+    public static final Item ITEM_INC_ASPHALT = new ItemBlockBase(INC_ASPHALT, false);
+    public static final Item ITEM_INC_FROSTED = new ItemBlockBase(INC_FROSTED_BLOCK, false);
+    public static final Item ITEM_INC_DECK = new ItemBlockBase(INC_DECK, false);
 
     /**
      * <h2>ITEM_BLOCK/ROAD 初始化区域</h2>

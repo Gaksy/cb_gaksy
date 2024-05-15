@@ -39,7 +39,7 @@ public class BlockCarpet extends BlockPropertyInteger {
     private final static PropertyInteger TYPE = PropertyInteger.create("type", 0, 15);
 
     public BlockCarpet() {
-        super("inc_carpet", ComfortBox.incTab, TYPE, 15);
+        super("inc_carpet", ComfortBox.incTab, TYPE, 15, "inception/carpet/inc_carpet_");
     }
 
     /**

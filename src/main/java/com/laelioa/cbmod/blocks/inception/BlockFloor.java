@@ -11,7 +11,7 @@ public class BlockFloor extends BlockPropertyInteger {
     private final static PropertyInteger TYPE = PropertyInteger.create("type", 0, 1);
 
     public BlockFloor() {
-        super("inc_floor", ComfortBox.incTab, TYPE, 1);
+        super("inc_floor", ComfortBox.incTab, TYPE, 1, "inception/floor/inc_floor_");
     }
 
     @Nonnull

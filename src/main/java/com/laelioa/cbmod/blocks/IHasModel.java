@@ -1,4 +1,4 @@
-package com.laelioa.cbmod.init;
+package com.laelioa.cbmod.blocks;
 
 /**
  * <h2>Interface IhasModel</h2>
@@ -6,6 +6,6 @@ package com.laelioa.cbmod.init;
  * path即可。该方法仅在ClientProxy中被调用，所以可以通过ComfortBox进行强转。
  * 请勿在别处调用该函数，以免在错误的端侧执行该代码。
  * */
-public interface IhasModel {
-    void registryModel(String path);
+public interface IHasModel {
+    void registerModel();
 }
