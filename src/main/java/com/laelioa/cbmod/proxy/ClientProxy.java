@@ -2,8 +2,10 @@ package com.laelioa.cbmod.proxy;
 
 import com.laelioa.cbmod.Reference;
 import com.laelioa.cbmod.blocks.BlockAsphalt;
+import com.laelioa.cbmod.blocks.BlockBase;
 import com.laelioa.cbmod.blocks.inception.BlockMarble;
 import com.laelioa.cbmod.init.CbBlocks;
+import com.laelioa.cbmod.init.IhasModel;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -38,37 +40,30 @@ public class ClientProxy extends CommonProxy {
      * */
     @Override
     public void registerBlockModels() {
-        for (BlockAsphalt.AsphaltType type : BlockAsphalt.AsphaltType.values()) {
-            registerModel("asphalt/asphalt_" + type.getName(), CbBlocks.ASPHALT, type.ordinal());
-        }
+        CbBlocks.ASPHALT.registryModel("asphalt/asphalt_");
 
-        for (int meta = 0; meta < 16; meta++) {
-            registerModel("inception/carpet/inc_carpet_" + meta, CbBlocks.INC_CARPET, meta);
-        }
+        CbBlocks.INC_CARPET.registryModel("inception/carpet/inc_carpet_");
+        CbBlocks.INC_CARPET_0.registryModel("inception/carpet/inc_carpet0_");
+        CbBlocks.INC_CONCRETE.registryModel("inception/concrete/inc_concrete_");
+        CbBlocks.INC_CERAMIC.registryModel("inception/ceramic/inc_ceramic_");
+        CbBlocks.INC_MARBLE.registryModel("inception/marble/inc_marble_");
+        CbBlocks.INC_FLOOR.registryModel("inception/floor/inc_floor_");
 
-        for (int meta = 0; meta < 2; meta++) {
-            registerModel("inception/carpet/inc_carpet0_" + meta, CbBlocks.INC_CARPET_0, meta);
-        }
+        CbBlocks.INC_ASPHALT.registryModel("inception/inc_asphalt");
+        CbBlocks.INC_FROSTED_BLOCK.registryModel("inception/inc_frosted_block");
+        CbBlocks.INC_DECK.registryModel("inception/inc_deck");
+    }
 
-        for (BlockMarble.MarbleType type : BlockMarble.MarbleType.values()) {
-            registerModel("inception/marble/inc_marble_" + type.getName(), CbBlocks.INC_MARBLE, type.ordinal());
-        }
-
-        for (int meta = 0; meta < 8; meta++) {
-            registerModel("inception/concrete/inc_concrete_" + meta, CbBlocks.INC_CONCRETE, meta);
-        }
-
-        for (int meta = 0; meta < 10; meta++) {
-            registerModel("inception/ceramic/inc_ceramic_" + meta, CbBlocks.INC_CERAMIC, meta);
-        }
-
-        for (int meta = 0; meta < 2; meta++) {
-            registerModel("inception/floor/inc_floor_" + meta, CbBlocks.INC_FLOOR, meta);
-        }
-
-        registerModel("inception/inc_asphalt", CbBlocks.INC_ASPHALT, 0);
-        registerModel("inception/inc_frosted_block", CbBlocks.INC_FROSTED_BLOCK, 0);
-        registerModel("inception/inc_deck", CbBlocks.INC_DECK, 0);
+    /**
+     * <h2>pubRegisterModel</h2>
+     * 将私有的 registerModel 封装为 public
+     * @param path 路径
+     * @param currentBlock 目标方块
+     * @param meta 状态
+     * @author gaksy
+     * */
+    public void pubRegisterModel(String path, Block currentBlock, int meta){
+        registerModel(path, currentBlock, meta);
     }
 
     /**
