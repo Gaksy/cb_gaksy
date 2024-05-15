@@ -1,11 +1,7 @@
 package com.laelioa.cbmod.proxy;
 
 import com.laelioa.cbmod.Reference;
-import com.laelioa.cbmod.blocks.BlockAsphalt;
-import com.laelioa.cbmod.blocks.BlockBase;
-import com.laelioa.cbmod.blocks.inception.BlockMarble;
 import com.laelioa.cbmod.init.CbBlocks;
-import com.laelioa.cbmod.init.IhasModel;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;

@@ -2,10 +2,8 @@ package com.laelioa.cbmod.blocks;
 
 import com.laelioa.cbmod.ComfortBox;
 import com.laelioa.cbmod.proxy.ClientProxy;
-import com.laelioa.cbmod.proxy.CommonProxy;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
-import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
