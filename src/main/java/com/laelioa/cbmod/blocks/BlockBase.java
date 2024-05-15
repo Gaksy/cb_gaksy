@@ -6,11 +6,7 @@ import com.laelioa.cbmod.init.RegistryHandler;
 import com.laelioa.cbmod.proxy.ClientProxy;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.ModelLoader;
 
 /**
  * <h2>Class BlockBase</h2>
@@ -57,6 +53,7 @@ public class BlockBase extends Block implements IHasModel {
      * <p>描述：Material默认为ROCK</p>
      * @param name 指定的方块名称
      * @param tab 指定的创造物品栏
+     * @param resourcePath 资源文件路径
      * @author gaksy
      * */
     public BlockBase(String name, CreativeTabs tab, String resourcePath) {

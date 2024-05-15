@@ -34,6 +34,7 @@ public class BlockPropertyEnum<T extends Enum<T> & IStringSerializable> extends 
      * @param name 指定的方块名称
      * @param tab 指定的创造物品栏
      * @param TYPE 物品的状态
+     * @param resourcePath 资源文件路径
      *
      * @author RMSCA
      * */
@@ -52,6 +53,7 @@ public class BlockPropertyEnum<T extends Enum<T> & IStringSerializable> extends 
      * @param material 物品的材质
      * @param tab 指定的创造物品栏
      * @param TYPE 物品的状态
+     * @param resourcePath 资源文件路径
      *
      * @author RMSCA
      * */
