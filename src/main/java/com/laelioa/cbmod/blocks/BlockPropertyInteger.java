@@ -1,5 +1,8 @@
 package com.laelioa.cbmod.blocks;
 
+import com.laelioa.cbmod.ComfortBox;
+import com.laelioa.cbmod.init.IhasModel;
+import com.laelioa.cbmod.proxy.ClientProxy;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.IBlockState;
@@ -20,7 +23,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
  * <p>在构造参数种必须传递PropertyInteger与其最大数量</p>
  * @author gaksy
  * */
-public class BlockPropertyInteger extends BlockBase {
+public class BlockPropertyInteger extends BlockBase{
     private final PropertyInteger TYPE;
     private final int MAX_STATES;
 
@@ -63,6 +66,17 @@ public class BlockPropertyInteger extends BlockBase {
         MAX_STATES = maxStates;
     }
 
+    /**
+     * <h2>registryModel(String path)</h2>
+     * 详情参考Interface {@link com.laelioa.cbmod.init.IhasModel}，注意该接口仅被ClientProxy调用。
+     * @author gaksy
+     * */
+    @Override
+    public void registryModel(String path) {
+        for(int meta = 0; meta <= MAX_STATES; ++meta){
+            ((ClientProxy) ComfortBox.proxy).pubRegisterModel(path + meta, this, meta);
+        }
+    }
 
     /**<h2>getStateFromMeta #191</h2>
      * 用于将序列化方块状态的值转换为方块的meta。

@@ -1,7 +1,10 @@
 package com.laelioa.cbmod.blocks;
 
+import com.laelioa.cbmod.ComfortBox;
 import com.laelioa.cbmod.Reference;
+import com.laelioa.cbmod.init.IhasModel;
 import com.laelioa.cbmod.init.RegistryHandler;
+import com.laelioa.cbmod.proxy.ClientProxy;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -23,7 +26,7 @@ import net.minecraft.creativetab.CreativeTabs;
  * </p>
  * @author gaksy
  * */
-public class BlockBase extends Block {
+public class BlockBase extends Block implements IhasModel {
     private String name;
 
     /**
@@ -71,6 +74,16 @@ public class BlockBase extends Block {
         setUnlocalizedName(name + "_unlocalized");       //设置本地化键名 示例：block_name_unlocalized
         setCreativeTab(tab);                             //设置方块所在的创造模式物品栏
         RegistryHandler.addBlock(name, this);      //将自身添加到注册列表
+    }
+
+    /**
+     * <h2>registryModel(String path)</h2>
+     * 详情参考Interface {@link com.laelioa.cbmod.init.IhasModel}，注意该接口仅被ClientProxy调用。
+     * @author gaksy
+     * */
+    @Override
+    public void registryModel(String path) {
+        ((ClientProxy)ComfortBox.proxy).pubRegisterModel(path, this, 0);
     }
 
     /**
