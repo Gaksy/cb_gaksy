@@ -36,6 +36,7 @@ public class BlockPropertyInteger extends BlockBase{
      * @param tab 指定的创造物品栏
      * @param TYPE 物品的状态
      * @param maxStates 物品的最大状态值
+     * @param resourcePath 资源文件路径
      *
      * @author gaksy
      * */
@@ -56,6 +57,7 @@ public class BlockPropertyInteger extends BlockBase{
      * @param material 物品的材质
      * @param TYPE 物品的状态
      * @param maxStates 物品的最大状态值
+     * @param resourcePath 资源文件路径
      *
      * @author gaksy
      * */
