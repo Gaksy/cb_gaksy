@@ -39,8 +39,8 @@ public class BlockPropertyInteger extends BlockBase{
      *
      * @author gaksy
      * */
-    public BlockPropertyInteger(String name, CreativeTabs tab, PropertyInteger TYPE, int maxStates) {
-        super(name, tab);
+    public BlockPropertyInteger(String name, CreativeTabs tab, PropertyInteger TYPE, int maxStates, String resourcePath) {
+        super(name, tab, resourcePath);
         this.TYPE = TYPE;
         MAX_STATES = maxStates;
     }
@@ -59,21 +59,21 @@ public class BlockPropertyInteger extends BlockBase{
      *
      * @author gaksy
      * */
-    public BlockPropertyInteger(String name, CreativeTabs tab, Material material, PropertyInteger TYPE, int maxStates) {
-        super(name, tab, material);
+    public BlockPropertyInteger(String name, CreativeTabs tab, Material material, PropertyInteger TYPE, int maxStates, String resourcePath) {
+        super(name, tab, material, resourcePath);
         this.TYPE = TYPE;
         MAX_STATES = maxStates;
     }
 
     /**
      * <h2>registryModel(String path)</h2>
-     * 详情参考Interface {@link com.laelioa.cbmod.init.IhasModel}，注意该接口仅被ClientProxy调用。
+     * 详情参考Interface {@link IHasModel}，注意该接口仅被ClientProxy调用。
      * @author gaksy
      * */
     @Override
-    public void registryModel(String path) {
-        for(int meta = 0; meta <= MAX_STATES; ++meta){
-            ((ClientProxy) ComfortBox.proxy).pubRegisterModel(path + meta, this, meta);
+    public void registerModel() {
+        for(int meta = 0; meta <= MAX_STATES; meta++){
+            ((ClientProxy) ComfortBox.proxy).register(this.getResourcePath() + meta, this, meta);
         }
     }
 

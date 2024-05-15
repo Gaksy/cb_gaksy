@@ -2,12 +2,15 @@ package com.laelioa.cbmod.blocks;
 
 import com.laelioa.cbmod.ComfortBox;
 import com.laelioa.cbmod.Reference;
-import com.laelioa.cbmod.init.IhasModel;
 import com.laelioa.cbmod.init.RegistryHandler;
 import com.laelioa.cbmod.proxy.ClientProxy;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.ModelLoader;
 
 /**
  * <h2>Class BlockBase</h2>
@@ -26,8 +29,9 @@ import net.minecraft.creativetab.CreativeTabs;
  * </p>
  * @author gaksy
  * */
-public class BlockBase extends Block implements IhasModel {
+public class BlockBase extends Block implements IHasModel {
     private String name;
+    private final String RESOURCE_PATH;
 
     /**
      * <h2>BaseBlock({@link String} block_name,
@@ -40,9 +44,10 @@ public class BlockBase extends Block implements IhasModel {
      *
      * @author gaksy
      * */
-    public BlockBase(String name, CreativeTabs tab, Material material) {
+    public BlockBase(String name, CreativeTabs tab, Material material, String resourcePath) {
         super(material);
         init(name, tab);
+        RESOURCE_PATH = resourcePath;
     }
 
     /**
@@ -54,9 +59,14 @@ public class BlockBase extends Block implements IhasModel {
      * @param tab 指定的创造物品栏
      * @author gaksy
      * */
-    public BlockBase(String name, CreativeTabs tab) {
+    public BlockBase(String name, CreativeTabs tab, String resourcePath) {
         super(Material.ROCK);
         init(name, tab);
+        RESOURCE_PATH = resourcePath;
+    }
+
+    public String getResourcePath() {
+        return RESOURCE_PATH;
     }
 
     /**
@@ -78,12 +88,12 @@ public class BlockBase extends Block implements IhasModel {
 
     /**
      * <h2>registryModel(String path)</h2>
-     * 详情参考Interface {@link com.laelioa.cbmod.init.IhasModel}，注意该接口仅被ClientProxy调用。
+     * 详情参考Interface {@link IHasModel}，注意该接口仅被ClientProxy调用。
      * @author gaksy
      * */
     @Override
-    public void registryModel(String path) {
-        ((ClientProxy)ComfortBox.proxy).pubRegisterModel(path, this, 0);
+    public void registerModel() {
+        ((ClientProxy)ComfortBox.proxy).register(RESOURCE_PATH, this, 0);
     }
 
     /**

@@ -25,7 +25,7 @@ public class BlockMarble extends BlockPropertyEnum<BlockMarble.MarbleType> {
     private static final PropertyEnum<MarbleType> TYPE = PropertyEnum.create("type", MarbleType.class);
 
     public BlockMarble() {
-        super("inc_marble", ComfortBox.incTab, TYPE);
+        super("inc_marble", ComfortBox.incTab, TYPE, "inception/marble/inc_marble_");
     }
 
     @Nonnull

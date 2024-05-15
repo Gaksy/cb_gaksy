@@ -37,8 +37,8 @@ public class BlockPropertyEnum<T extends Enum<T> & IStringSerializable> extends 
      *
      * @author RMSCA
      * */
-    public BlockPropertyEnum(String name, CreativeTabs tab, PropertyEnum<T> TYPE) {
-        super(name, tab);
+    public BlockPropertyEnum(String name, CreativeTabs tab, PropertyEnum<T> TYPE, String resourcePath) {
+        super(name, tab, resourcePath);
         this.TYPE = TYPE;
     }
 
@@ -55,20 +55,20 @@ public class BlockPropertyEnum<T extends Enum<T> & IStringSerializable> extends 
      *
      * @author RMSCA
      * */
-    public BlockPropertyEnum(String name, CreativeTabs tab, Material material, PropertyEnum<T> TYPE) {
-        super(name, tab, material);
+    public BlockPropertyEnum(String name, CreativeTabs tab, Material material, PropertyEnum<T> TYPE, String resourcePath) {
+        super(name, tab, material, resourcePath);
         this.TYPE = TYPE;
     }
 
     /**
      * <h2>registryModel(String path)</h2>
-     * 详情参考Interface {@link com.laelioa.cbmod.init.IhasModel}，注意该接口仅被ClientProxy调用。
+     * 详情参考Interface {@link IHasModel}，注意该接口仅被ClientProxy调用。
      * @author gaksy
      * */
     @Override
-    public void registryModel(String path) {
+    public void registerModel() {
         for(T type: TYPE.getValueClass().getEnumConstants()){
-            ((ClientProxy) ComfortBox.proxy).pubRegisterModel(path + type.getName(), this, type.ordinal());
+            ((ClientProxy)ComfortBox.proxy).register(this.getResourcePath() + type.getName(), this, type.ordinal());
         }
     }
 

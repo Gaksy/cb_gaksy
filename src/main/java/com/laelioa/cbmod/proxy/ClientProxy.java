@@ -1,7 +1,9 @@
 package com.laelioa.cbmod.proxy;
 
 import com.laelioa.cbmod.Reference;
+import com.laelioa.cbmod.blocks.BlockBase;
 import com.laelioa.cbmod.init.CbBlocks;
+import com.laelioa.cbmod.init.RegistryHandler;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -36,30 +38,9 @@ public class ClientProxy extends CommonProxy {
      * */
     @Override
     public void registerBlockModels() {
-        CbBlocks.ASPHALT.registryModel("asphalt/asphalt_");
-
-        CbBlocks.INC_CARPET.registryModel("inception/carpet/inc_carpet_");
-        CbBlocks.INC_CARPET_0.registryModel("inception/carpet/inc_carpet0_");
-        CbBlocks.INC_CONCRETE.registryModel("inception/concrete/inc_concrete_");
-        CbBlocks.INC_CERAMIC.registryModel("inception/ceramic/inc_ceramic_");
-        CbBlocks.INC_MARBLE.registryModel("inception/marble/inc_marble_");
-        CbBlocks.INC_FLOOR.registryModel("inception/floor/inc_floor_");
-
-        CbBlocks.INC_ASPHALT.registryModel("inception/inc_asphalt");
-        CbBlocks.INC_FROSTED_BLOCK.registryModel("inception/inc_frosted_block");
-        CbBlocks.INC_DECK.registryModel("inception/inc_deck");
-    }
-
-    /**
-     * <h2>pubRegisterModel</h2>
-     * 将私有的 registerModel 封装为 public
-     * @param path 路径
-     * @param currentBlock 目标方块
-     * @param meta 状态
-     * @author gaksy
-     * */
-    public void pubRegisterModel(String path, Block currentBlock, int meta){
-        registerModel(path, currentBlock, meta);
+        for (Block block : RegistryHandler.getBlocks()) {
+            ((BlockBase)block).registerModel();
+        }
     }
 
     /**
@@ -67,7 +48,7 @@ public class ClientProxy extends CommonProxy {
      * <p>用于注册模型的标准流程</p>
      * @author RMSCA
      * */
-    private void registerModel(String path, Block block, int meta) {
+    public void register(String path, Block block, int meta) {
         ResourceLocation resourceLocation = new ResourceLocation(Reference.MODID, path);
         ModelResourceLocation modelResourceLocation = new ModelResourceLocation(resourceLocation, "inventory");
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta, modelResourceLocation);

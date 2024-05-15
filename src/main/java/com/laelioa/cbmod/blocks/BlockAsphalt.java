@@ -48,7 +48,7 @@ public class BlockAsphalt extends BlockPropertyEnum<BlockAsphalt.AsphaltType> {
     private static final PropertyEnum<AsphaltType> TYPE = PropertyEnum.create("type", AsphaltType.class);
 
     public BlockAsphalt() {
-        super("asphalt", ComfortBox.roadTab, TYPE);
+        super("asphalt", ComfortBox.roadTab, TYPE, "asphalt/asphalt_");
     }
 
     @Nonnull
