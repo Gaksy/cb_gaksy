@@ -1,40 +1,29 @@
 package com.laelioa.cbmod.blocks.inception;
 
 import com.laelioa.cbmod.ComfortBox;
-import com.laelioa.cbmod.blocks.BlockPropertyEnum;
-import net.minecraft.block.properties.PropertyEnum;
+import com.laelioa.cbmod.blocks.BlockPropertyBool;
+import com.laelioa.cbmod.proxy.ClientProxy;
+import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockStateContainer;
-import net.minecraft.util.IStringSerializable;
 
 import javax.annotation.Nonnull;
 
-public class BlockGravel extends BlockPropertyEnum<BlockGravel.GravelType> {
+public class BlockGravel extends BlockPropertyBool {
 
-    private static final PropertyEnum<GravelType> TYPE = PropertyEnum.create("type", BlockGravel.GravelType.class);
+    private static final PropertyBool BROKEN = PropertyBool.create("broken");
     public BlockGravel(){
-        super("inc_gravel", ComfortBox.incTab, TYPE, "inception/gravel/inc_gravel_");
+        super("inc_gravel", ComfortBox.incTab, "inception/gravel/inc_gravel_", BROKEN);
     }
 
     @Nonnull
     @Override
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, TYPE);
+        return new BlockStateContainer(this, BROKEN);
     }
 
-    public enum GravelType implements IStringSerializable {
-        DEFAULT, BROKEN;
-
-        public static GravelType byMetadata(int meta) {
-            if (meta < 0 || meta >= values().length) {
-                meta = 0;
-            }
-            return values()[meta];
-        }
-
-        @Nonnull
-        @Override
-        public String getName() {
-            return name().toLowerCase();
-        }
+    @Override
+    public void registerModel() {
+        ((ClientProxy) ComfortBox.proxy).register(this.getResourcePath() + "default", this, 0);
+        ((ClientProxy) ComfortBox.proxy).register(this.getResourcePath() + "broken", this, 1);
     }
 }

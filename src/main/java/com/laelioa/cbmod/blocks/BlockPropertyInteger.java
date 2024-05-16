@@ -22,7 +22,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
  * <p>在构造参数种必须传递PropertyInteger与其最大数量</p>
  * @author gaksy
  * */
-public class BlockPropertyInteger extends BlockBase{
+public class BlockPropertyInteger extends BlockBase {
     private final PropertyInteger TYPE;
     private final int MAX_STATES;
 

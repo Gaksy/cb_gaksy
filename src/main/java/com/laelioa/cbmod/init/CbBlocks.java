@@ -36,9 +36,11 @@ public class CbBlocks {
     public static final Block INC_CONCRETE = new BlockConcrete();
     public static final Block INC_MARBLE = new BlockMarble();
     public static final Block INC_FLOOR = new BlockFloor();
+    public static final Block INC_GRAVEL = new BlockGravel();
     public static final Block INC_ASPHALT = new BlockBase("inc_asphalt", ComfortBox.incTab, "inception/inc_asphalt");
     public static final Block INC_FROSTED_BLOCK = new BlockBase("inc_frosted_block", ComfortBox.incTab, "inception/inc_frosted_block");
     public static final Block INC_DECK = new BlockBase("inc_deck", ComfortBox.incTab, "inception/inc_deck");
+
     public static final Block INC_BAD_PLANK = new BlockBase("inc_bad_plank", ComfortBox.incTab, "inception/inc_bad_plank");
     public static final Block INC_COAL = new BlockBase("inc_coal", ComfortBox.incTab, "inception/inc_coal");
     public static final Block INC_CROCODILE_LEATHER = new BlockBase("inc_crocodile_leather", ComfortBox.incTab, "inception/inc_crocodile_leather");
@@ -72,7 +74,6 @@ public class CbBlocks {
     public static final Block INC_VERTICAL_STRIPES_DIRTY = new BlockBase("inc_vertical_stripes_dirty", ComfortBox.incTab, "inception/inc_vertical_stripes_dirty");
     public static final Block INC_WIALL_WHITE = new BlockBase("inc_wall_white", ComfortBox.incTab, "inception/inc_wall_white");
     public static final Block INC_KITCHEN_RANGE = new BlockBase("inc_kitchen_range", ComfortBox.incTab, "inception/inc_kitchen_range");
-    public static final Block INC_GRAVEL = new BlockGravel();
     public static final Block INC_OAK = new BlockOak();
 
     /**
@@ -85,9 +86,11 @@ public class CbBlocks {
     public static final Item ITEM_INC_CONCRETE = new ItemBlockBase(INC_CONCRETE, true);
     public static final Item ITEM_INC_MARBLE = new ItemBlockMarble();
     public static final Item ITEM_INC_FLOOR = new ItemBlockBase(INC_FLOOR, true);
+    public static final Item ITEM_INC_GRAVEL = new ItemBlockGravel();
     public static final Item ITEM_INC_ASPHALT = new ItemBlockBase(INC_ASPHALT, false);
     public static final Item ITEM_INC_FROSTED = new ItemBlockBase(INC_FROSTED_BLOCK, false);
     public static final Item ITEM_INC_DECK = new ItemBlockBase(INC_DECK, false);
+
     public static final Item ITEM_INC_BAD_PLANK = new ItemBlockBase(INC_BAD_PLANK, false);
     public static final Item ITEM_INC_COAL = new ItemBlockBase(INC_COAL, false);
     public static final Item ITEM_INC_CROCODILE_LEATHER = new ItemBlockBase(INC_CROCODILE_LEATHER, false);
@@ -120,7 +123,6 @@ public class CbBlocks {
     public static final Item ITEM_INC_VERTICAL_STRIPES_DIRTY= new ItemBlockBase(INC_VERTICAL_STRIPES_DIRTY, false);
     public static final Item ITEM_INC_WIALL_WHITE= new ItemBlockBase(INC_WIALL_WHITE, false);
     public static final Item ITEM_INC_KITCHEN_RANGE = new ItemBlockBase(INC_KITCHEN_RANGE, false);
-    public static final Item ITEM_INC_GRAVEL = new ItemBlockBase(INC_GRAVEL, true);
     public static final Item ITEM_INC_OAK = new ItemBlockBase(INC_OAK, true);
 
     /**
