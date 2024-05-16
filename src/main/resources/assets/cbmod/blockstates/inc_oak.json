@@ -1,0 +1,6 @@
+{
+  "variants":{
+    "type=default":{"model":"cbmod:inception/oak/inc_oak_default_model"},
+    "type=smooth":{"model":"cbmod:inception/oak/inc_oak_smooth_model"}
+  }
+}

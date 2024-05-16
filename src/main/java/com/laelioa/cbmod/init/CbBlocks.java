@@ -73,6 +73,7 @@ public class CbBlocks {
     public static final Block INC_WIALL_WHITE = new BlockBase("inc_wall_white", ComfortBox.incTab, "inception/inc_wall_white");
     public static final Block INC_KITCHEN_RANGE = new BlockBase("inc_kitchen_range", ComfortBox.incTab, "inception/inc_kitchen_range");
     public static final Block INC_GRAVEL = new BlockGravel();
+    public static final Block INC_OAK = new BlockOak();
 
     /**
      * <h2>ITEM_BLOCK/INCEPTION 初始化区域</h2>
@@ -120,6 +121,7 @@ public class CbBlocks {
     public static final Item ITEM_INC_WIALL_WHITE= new ItemBlockBase(INC_WIALL_WHITE, false);
     public static final Item ITEM_INC_KITCHEN_RANGE = new ItemBlockBase(INC_KITCHEN_RANGE, false);
     public static final Item ITEM_INC_GRAVEL = new ItemBlockBase(INC_GRAVEL, true);
+    public static final Item ITEM_INC_OAK = new ItemBlockBase(INC_OAK, true);
 
     /**
      * <h2>BLOCK/ROAD 初始化区域</h2>

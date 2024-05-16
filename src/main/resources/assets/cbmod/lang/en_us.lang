@@ -99,3 +99,5 @@ tile.inc_vertical_stripes_dirty_unlocalized.name=Vertical Stripes Dirty Wood
 tile.inc_kitchen_range_unlocalized.name=Kitchen Range
 tile.inc_gravel_unlocalized_0.name=Gravel 0
 tile.inc_gravel_unlocalized_1.name=Gravel 1
+tile.inc_oak_unlocalized_0.name=Oak0
+tile.inc_oak_unlocalized_1.name=Oak1
