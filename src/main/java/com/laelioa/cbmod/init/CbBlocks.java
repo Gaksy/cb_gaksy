@@ -60,6 +60,7 @@ public class CbBlocks {
     public static final Block INC_PLASTIC = new BlockBase("inc_plastic", ComfortBox.incTab, "inception/inc_plastic");
     public static final Block INC_POLYGON_STITCHING = new BlockBase("inc_polygon_stitching", ComfortBox.incTab, "inception/inc_polygon_stitching");
     public static final Block INC_RATTAN = new BlockBase("inc_rattan", ComfortBox.incTab, "inception/inc_rattan");
+    public static final Block INC_RECTANGLE_STITCHING = new BlockBase("inc_rectangle_stitching", ComfortBox.incTab, "inception/inc_rectangle_stitching");
 
     /**
      * <h2>ITEM_BLOCK/INCEPTION 初始化区域</h2>
@@ -94,6 +95,7 @@ public class CbBlocks {
     public static final Item ITEM_INC_PLASTIC = new ItemBlockBase(INC_PLASTIC, false);
     public static final Item ITEM_INC_POLYGON_STITCHING = new ItemBlockBase(INC_POLYGON_STITCHING, false);
     public static final Item ITEM_INC_RATTAN = new ItemBlockBase(INC_RATTAN, false);
+    public static final Item ITEM_INC_RECTANGLE_STITCHING = new ItemBlockBase(INC_RECTANGLE_STITCHING,false);
 
     /**
      * <h2>BLOCK/ROAD 初始化区域</h2>
