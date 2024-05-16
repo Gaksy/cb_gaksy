@@ -44,8 +44,12 @@ public class CbBlocks {
     public static final Block INC_CROCODILE_LEATHER = new BlockBase("inc_crocodile_leather", ComfortBox.incTab, "inception/inc_crocodile_leather");
     public static final Block INC_DAMASCUS_STEEL = new BlockBase("inc_damascus_steel", ComfortBox.incTab, "inception/inc_damascus_steel");
     public static final Block INC_FLANNEL = new BlockBase("inc_flannel", ComfortBox.incTab, "inception/inc_flannel");
-
     public static final Block INC_GOLD_BLOCK = new BlockBase("inc_gold_block", ComfortBox.incTab, "inception/inc_gold_block");
+    public static final Block INC_GRANITE = new BlockBase("inc_granite", ComfortBox.incTab, "inception/inc_granite");
+    public static final Block INC_HIGHLY_REFLECTIVE = new BlockBase("inc_highly_reflective", ComfortBox.incTab, "inception/inc_highly_reflective");
+    public static final Block INC_ICE_BLOCK = new BlockBase("inc_ice_block", ComfortBox.incTab, "inception/inc_ice_block");
+    public static final Block INC_IRON_BLOCK = new BlockBase("inc_iron_block", ComfortBox.incTab, "inception/inc_iron_block");
+    public static final Block INC_LATEX_MATTRESS = new BlockBase("inc_latex_mattress", ComfortBox.incTab, "inception/inc_latex_mattress");
 
     /**
      * <h2>ITEM_BLOCK/INCEPTION 初始化区域</h2>
@@ -66,6 +70,11 @@ public class CbBlocks {
     public static final Item ITEM_INC_DAMASCUS_STEEL = new ItemBlockBase(INC_DAMASCUS_STEEL, false);
     public static final Item ITEM_INC_FLANNEL = new ItemBlockBase(INC_FLANNEL, false);
     public static final Item ITEM_INC_GOLD_BLOCK = new ItemBlockBase(INC_GOLD_BLOCK, false);
+    public static final Item ITEM_INC_GRANITE = new ItemBlockBase(INC_GRANITE, false);
+    public static final Item ITEM_INC_HIGHLY_REFLECTIVE = new ItemBlockBase(INC_HIGHLY_REFLECTIVE, false);
+    public static final Item ITEM_INC_ICE_BLOCK = new ItemBlockBase(INC_ICE_BLOCK, false);
+    public static final Item ITEM_INC_IRON_BLOCK = new ItemBlockBase(INC_IRON_BLOCK, false);
+    public static final Item ITEM_INC_LATEX_MATTRESS = new ItemBlockBase(INC_LATEX_MATTRESS, false);
 
     /**
      * <h2>BLOCK/ROAD 初始化区域</h2>
