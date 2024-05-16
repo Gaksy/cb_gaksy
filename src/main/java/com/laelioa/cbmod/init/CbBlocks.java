@@ -40,7 +40,7 @@ public class CbBlocks {
     public static final Block INC_FROSTED_BLOCK = new BlockBase("inc_frosted_block", ComfortBox.incTab, "inception/inc_frosted_block");
     public static final Block INC_DECK = new BlockBase("inc_deck", ComfortBox.incTab, "inception/inc_deck");
     public static final Block INC_BAD_PLANK = new BlockBase("inc_bad_plank", ComfortBox.incTab, "inception/inc_bad_plank");
-
+    public static final Block INC_COAL = new BlockBase("inc_coal", ComfortBox.incTab, "inception/inc_coal");
 
     /**
      * <h2>ITEM_BLOCK/INCEPTION 初始化区域</h2>
@@ -55,7 +55,8 @@ public class CbBlocks {
     public static final Item ITEM_INC_ASPHALT = new ItemBlockBase(INC_ASPHALT, false);
     public static final Item ITEM_INC_FROSTED = new ItemBlockBase(INC_FROSTED_BLOCK, false);
     public static final Item ITEM_INC_DECK = new ItemBlockBase(INC_DECK, false);
-    public static final Item ITEM_BAD_PLANK = new ItemBlockBase(INC_BAD_PLANK, false);
+    public static final Item ITEM_INC_BAD_PLANK = new ItemBlockBase(INC_BAD_PLANK, false);
+    public static final Item ITEM_INC_COAL = new ItemBlockBase(INC_COAL, false);
 
     /**
      * <h2>BLOCK/ROAD 初始化区域</h2>
