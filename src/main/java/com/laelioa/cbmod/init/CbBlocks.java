@@ -72,6 +72,7 @@ public class CbBlocks {
     public static final Block INC_VERTICAL_STRIPES_DIRTY = new BlockBase("inc_vertical_stripes_dirty", ComfortBox.incTab, "inception/inc_vertical_stripes_dirty");
     public static final Block INC_WIALL_WHITE = new BlockBase("inc_wall_white", ComfortBox.incTab, "inception/inc_wall_white");
     public static final Block INC_KITCHEN_RANGE = new BlockBase("inc_kitchen_range", ComfortBox.incTab, "inception/inc_kitchen_range");
+    public static final Block INC_GRAVEL = new BlockGravel();
 
     /**
      * <h2>ITEM_BLOCK/INCEPTION 初始化区域</h2>
@@ -111,15 +112,14 @@ public class CbBlocks {
     public static final Item ITEM_INC_SAND = new ItemBlockBase(INC_SAND, false);
     public static final Item ITEM_INC_SANDSTONE_CULTURE = new ItemBlockBase(INC_SANDSTONE_CULTURE, false);
     public static final Item ITEM_INC_SKIN_STRIAE_BRICKS = new ItemBlockBase(INC_SKIN_STRIAE_BRICKS, false);
-
     public static final Item ITEM_INC_SPOTLIGHT = new ItemBlockBase(INC_SPOTLIGHT, false);
     public static final Item ITEM_INC_TABLECLOTH= new ItemBlockBase(INC_TABLECLOTH, false);
     public static final Item ITEM_INC_TATAMI= new ItemBlockBase(INC_TATAMI, false);
     public static final Item ITEM_INC_TERRAZZO= new ItemBlockBase(INC_TERRAZZO, false);
     public static final Item ITEM_INC_VERTICAL_STRIPES_DIRTY= new ItemBlockBase(INC_VERTICAL_STRIPES_DIRTY, false);
     public static final Item ITEM_INC_WIALL_WHITE= new ItemBlockBase(INC_WIALL_WHITE, false);
-
     public static final Item ITEM_INC_KITCHEN_RANGE = new ItemBlockBase(INC_KITCHEN_RANGE, false);
+    public static final Item ITEM_INC_GRAVEL = new ItemBlockBase(INC_GRAVEL, true);
 
     /**
      * <h2>BLOCK/ROAD 初始化区域</h2>
