@@ -45,6 +45,8 @@ public class CbBlocks {
     public static final Block INC_DAMASCUS_STEEL = new BlockBase("inc_damascus_steel", ComfortBox.incTab, "inception/inc_damascus_steel");
     public static final Block INC_FLANNEL = new BlockBase("inc_flannel", ComfortBox.incTab, "inception/inc_flannel");
 
+    public static final Block INC_GOLD_BLOCK = new BlockBase("inc_gold_block", ComfortBox.incTab, "inception/inc_gold_block");
+
     /**
      * <h2>ITEM_BLOCK/INCEPTION 初始化区域</h2>
      **/
@@ -61,8 +63,10 @@ public class CbBlocks {
     public static final Item ITEM_INC_BAD_PLANK = new ItemBlockBase(INC_BAD_PLANK, false);
     public static final Item ITEM_INC_COAL = new ItemBlockBase(INC_COAL, false);
     public static final Item ITEM_INC_CROCODILE_LEATHER = new ItemBlockBase(INC_CROCODILE_LEATHER, false);
-    public static final Item ITEM_INC_DAMASCUS_STEET = new ItemBlockBase(INC_DAMASCUS_STEEL, false);
+    public static final Item ITEM_INC_DAMASCUS_STEEL = new ItemBlockBase(INC_DAMASCUS_STEEL, false);
     public static final Item ITEM_INC_FLANNEL = new ItemBlockBase(INC_FLANNEL, false);
+    public static final Item ITEM_INC_GOLD_BLOCK = new ItemBlockBase(INC_GOLD_BLOCK, false);
+
     /**
      * <h2>BLOCK/ROAD 初始化区域</h2>
      **/
