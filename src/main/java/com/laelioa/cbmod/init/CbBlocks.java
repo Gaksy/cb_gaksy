@@ -62,7 +62,7 @@ public class CbBlocks {
     public static final ItemBlock ITEM_INC_MARBLE = new ItemBlockMarble();
     public static final ItemBlock ITEM_INC_FLOOR = new ItemBlockBase(INC_FLOOR, true);
     public static final ItemBlock ITEM_INC_ASPHALT = new ItemBlockBase(INC_ASPHALT, false);
-    public static final ItemBlock ITEM_INC_FROSTED = new ItemBlockBase(INC_FROSTED_BLOCK, false);
+    public static final ItemBlock ITEM_INC_FROSTED_BLOCK = new ItemBlockBase(INC_FROSTED_BLOCK, false);
     public static final ItemBlock ITEM_INC_DECK = new ItemBlockBase(INC_DECK, false);
 
     /**
