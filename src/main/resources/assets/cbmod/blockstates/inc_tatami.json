@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "normal": {"model": "cbmod:inception/inc_tatami_model"
+    }
+  }
+}
