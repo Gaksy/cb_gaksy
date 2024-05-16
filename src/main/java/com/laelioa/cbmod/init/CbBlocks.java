@@ -9,7 +9,6 @@ import com.laelioa.cbmod.items.ItemBlockBase;
 import com.laelioa.cbmod.items.inception.*;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraftforge.registries.IForgeRegistry;
 
 //BLOCK | INCEPTION
@@ -29,7 +28,6 @@ import net.minecraftforge.registries.IForgeRegistry;
 public class CbBlocks {
     /**
      * <h2>BLOCK/INCEPTION 初始化区域</h2>
-     * <p>Goto {@link CbBlocks#ITEM_INC_CARPET ITEM_BLOCK/INCEPTION}</p>
      **/
     //blocks.inception
     public static final Block INC_CARPET = new BlockCarpet();
@@ -41,18 +39,11 @@ public class CbBlocks {
     public static final Block INC_ASPHALT = new BlockBase("inc_asphalt", ComfortBox.incTab, "inception/inc_asphalt");
     public static final Block INC_FROSTED_BLOCK = new BlockBase("inc_frosted_block", ComfortBox.incTab, "inception/inc_frosted_block");
     public static final Block INC_DECK = new BlockBase("inc_deck", ComfortBox.incTab, "inception/inc_deck");
-
-    /**
-     * <h2>BLOCK/ROAD 初始化区域</h2>
-     * <p>Goto {@link CbBlocks#ITEM_ASPHALT ITEM_BLOCK/ROAD}</p>
-     **/
-    //blocks
-    public static final BlockBase ASPHALT = new BlockAsphalt();
+    public static final Block INC_BAD_PLANK = new BlockBase("inc_bad_plank", ComfortBox.incTab, "inception/inc_bad_plank");
 
 
     /**
      * <h2>ITEM_BLOCK/INCEPTION 初始化区域</h2>
-     * <p>Goto {@link CbBlocks#INC_CARPET BLOCK/INCEPTION}</p>
      **/
     //items.inception
     public static final Item ITEM_INC_CARPET = new ItemBlockBase(INC_CARPET, true);
@@ -64,10 +55,16 @@ public class CbBlocks {
     public static final Item ITEM_INC_ASPHALT = new ItemBlockBase(INC_ASPHALT, false);
     public static final Item ITEM_INC_FROSTED = new ItemBlockBase(INC_FROSTED_BLOCK, false);
     public static final Item ITEM_INC_DECK = new ItemBlockBase(INC_DECK, false);
+    public static final Item ITEM_BAD_PLANK = new ItemBlockBase(INC_BAD_PLANK, false);
+
+    /**
+     * <h2>BLOCK/ROAD 初始化区域</h2>
+     **/
+    //blocks
+    public static final BlockBase ASPHALT = new BlockAsphalt();
 
     /**
      * <h2>ITEM_BLOCK/ROAD 初始化区域</h2>
-     * <p>Goto {@link CbBlocks#ASPHALT BLOCK/ROAD}</p>
      **/
     //items
     public static final ItemBlockAsphalt ITEM_ASPHALT = new ItemBlockAsphalt();

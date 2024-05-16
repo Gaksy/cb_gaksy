@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "normal": {
+      "model": "cbmod:inception/inc_bad_plank_model"
+    }
+  }
+}
