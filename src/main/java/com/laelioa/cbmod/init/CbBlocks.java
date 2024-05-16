@@ -52,6 +52,7 @@ public class CbBlocks {
     public static final Block INC_LATEX_MATTRESS = new BlockBase("inc_latex_mattress", ComfortBox.incTab, "inception/inc_latex_mattress");
     public static final Block INC_LEATHER = new BlockBase("inc_leather", ComfortBox.incTab, "inception/inc_leather");
     public static final Block INC_LIMESTONE = new BlockBase("inc_limestone", ComfortBox.incTab, "inception/inc_limestone");
+    public static final Block INC_LINEN = new BlockBase("inc_linen", ComfortBox.incTab, "inception/inc_linen");
 
     /**
      * <h2>ITEM_BLOCK/INCEPTION 初始化区域</h2>
