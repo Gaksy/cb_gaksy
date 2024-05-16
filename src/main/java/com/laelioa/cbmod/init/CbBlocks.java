@@ -41,8 +41,8 @@ public class CbBlocks {
     public static final Block INC_DECK = new BlockBase("inc_deck", ComfortBox.incTab, "inception/inc_deck");
     public static final Block INC_BAD_PLANK = new BlockBase("inc_bad_plank", ComfortBox.incTab, "inception/inc_bad_plank");
     public static final Block INC_COAL = new BlockBase("inc_coal", ComfortBox.incTab, "inception/inc_coal");
-
     public static final Block INC_CROCODILE_LEATHER = new BlockBase("inc_crocodile_leather", ComfortBox.incTab, "inception/inc_crocodile_leather");
+    public static final Block INC_DAMASCUS_STEEL = new BlockBase("inc_damascus_steel", ComfortBox.incTab, "inception/inc_damascus_steel");
 
     /**
      * <h2>ITEM_BLOCK/INCEPTION 初始化区域</h2>
@@ -60,7 +60,7 @@ public class CbBlocks {
     public static final Item ITEM_INC_BAD_PLANK = new ItemBlockBase(INC_BAD_PLANK, false);
     public static final Item ITEM_INC_COAL = new ItemBlockBase(INC_COAL, false);
     public static final Item ITEM_INC_CROCODILE_LEATHER = new ItemBlockBase(INC_CROCODILE_LEATHER, false);
-
+    public static final Item ITEM_INC_DAMASCUS_STEET = new ItemBlockBase(INC_DAMASCUS_STEEL, false);
     /**
      * <h2>BLOCK/ROAD 初始化区域</h2>
      **/
