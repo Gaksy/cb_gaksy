@@ -56,6 +56,8 @@ public class CbBlocks {
     public static final Block INC_LOG_SMOOTH = new BlockBase("inc_log_smooth", ComfortBox.incTab, "inception/inc_log_smooth");
     public static final Block INC_LUXURIOUS_LEATHER = new BlockBase("inc_luxurious_leather", ComfortBox.incTab, "inception/inc_luxurious_leather");
     public static final Block INC_MIRROR = new BlockBase("inc_mirror", ComfortBox.incTab, "inception/inc_mirror");
+    public static final Block INC_PINEWOOD = new BlockBase("inc_pinewood", ComfortBox.incTab, "inception/inc_pinewood");
+    public static final Block INC_PLASTIC = new BlockBase("inc_plastic", ComfortBox.incTab, "inception/inc_plastic");
 
     /**
      * <h2>ITEM_BLOCK/INCEPTION 初始化区域</h2>
@@ -86,6 +88,8 @@ public class CbBlocks {
     public static final Item ITEM_INC_LOG_SMOOTH = new ItemBlockBase(INC_LOG_SMOOTH, false);
     public static final Item ITEM_INC_LUXURIOUS_LEATHER = new ItemBlockBase(INC_LUXURIOUS_LEATHER, false);
     public static final Item ITEM_INC_MIRROR = new ItemBlockBase(INC_MIRROR, false);
+    public static final Item ITEM_INC_PINEWOOD = new ItemBlockBase(INC_PINEWOOD, false);
+    public static final Item ITEM_INC_PLASTIC = new ItemBlockBase(INC_PLASTIC, false);
 
     /**
      * <h2>BLOCK/ROAD 初始化区域</h2>
