@@ -1,39 +1,29 @@
 package com.laelioa.cbmod.blocks.inception;
 
 import com.laelioa.cbmod.ComfortBox;
-import com.laelioa.cbmod.blocks.BlockPropertyEnum;
-import net.minecraft.block.properties.PropertyEnum;
+import com.laelioa.cbmod.blocks.BlockPropertyBool;
+import com.laelioa.cbmod.proxy.ClientProxy;
+import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockStateContainer;
-import net.minecraft.util.IStringSerializable;
 
 import javax.annotation.Nonnull;
 
-public class BlockOak extends BlockPropertyEnum<BlockOak.OakType> {
-    private static final PropertyEnum<OakType> TYPE = PropertyEnum.create("type", BlockOak.OakType.class);
+public class BlockOak extends BlockPropertyBool {
+    private static final PropertyBool SMOOTH = PropertyBool.create("smooth");
+
     public BlockOak(){
-        super("inc_oak", ComfortBox.incTab, TYPE, "inception/oak/inc_oak_");
+        super("inc_oak", ComfortBox.incTab, "inception/oak/inc_oak_", SMOOTH);
     }
 
     @Nonnull
     @Override
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, TYPE);
+        return new BlockStateContainer(this, SMOOTH);
     }
 
-    public enum OakType implements IStringSerializable {
-        DEFAULT, SMOOTH;
-
-        public static OakType byMetadata(int meta) {
-            if (meta < 0 || meta >= values().length) {
-                meta = 0;
-            }
-            return values()[meta];
-        }
-
-        @Nonnull
-        @Override
-        public String getName() {
-            return name().toLowerCase();
-        }
+    @Override
+    public void registerModel() {
+        ((ClientProxy) ComfortBox.proxy).register(this.getResourcePath() + "default", this, 0);
+        ((ClientProxy) ComfortBox.proxy).register(this.getResourcePath() + "smooth", this, 1);
     }
 }

@@ -27,6 +27,12 @@ import net.minecraftforge.registries.IForgeRegistry;
 @SuppressWarnings("unused")     //取消未使用警告
 public class CbBlocks {
     /**
+     * <h2>BLOCK/ROAD 初始化区域</h2>
+     **/
+    //blocks
+    public static final BlockBase ASPHALT = new BlockAsphalt();
+
+    /**
      * <h2>BLOCK/INCEPTION 初始化区域</h2>
      **/
     //blocks.inception
@@ -37,6 +43,7 @@ public class CbBlocks {
     public static final Block INC_MARBLE = new BlockMarble();
     public static final Block INC_FLOOR = new BlockFloor();
     public static final Block INC_GRAVEL = new BlockGravel();
+    public static final Block INC_OAK = new BlockOak();
     public static final Block INC_ASPHALT = new BlockBase("inc_asphalt", ComfortBox.incTab, "inception/inc_asphalt");
     public static final Block INC_FROSTED_BLOCK = new BlockBase("inc_frosted_block", ComfortBox.incTab, "inception/inc_frosted_block");
     public static final Block INC_DECK = new BlockBase("inc_deck", ComfortBox.incTab, "inception/inc_deck");
@@ -74,7 +81,12 @@ public class CbBlocks {
     public static final Block INC_VERTICAL_STRIPES_DIRTY = new BlockBase("inc_vertical_stripes_dirty", ComfortBox.incTab, "inception/inc_vertical_stripes_dirty");
     public static final Block INC_WIALL_WHITE = new BlockBase("inc_wall_white", ComfortBox.incTab, "inception/inc_wall_white");
     public static final Block INC_KITCHEN_RANGE = new BlockBase("inc_kitchen_range", ComfortBox.incTab, "inception/inc_kitchen_range");
-    public static final Block INC_OAK = new BlockOak();
+
+    /**
+     * <h2>ITEM_BLOCK/ROAD 初始化区域</h2>
+     **/
+    //items
+    public static final ItemBlockAsphalt ITEM_ASPHALT = new ItemBlockAsphalt();
 
     /**
      * <h2>ITEM_BLOCK/INCEPTION 初始化区域</h2>
@@ -87,6 +99,7 @@ public class CbBlocks {
     public static final Item ITEM_INC_MARBLE = new ItemBlockMarble();
     public static final Item ITEM_INC_FLOOR = new ItemBlockBase(INC_FLOOR, true);
     public static final Item ITEM_INC_GRAVEL = new ItemBlockGravel();
+    public static final Item ITEM_INC_OAK = new ItemBlockOak();
     public static final Item ITEM_INC_ASPHALT = new ItemBlockBase(INC_ASPHALT, false);
     public static final Item ITEM_INC_FROSTED = new ItemBlockBase(INC_FROSTED_BLOCK, false);
     public static final Item ITEM_INC_DECK = new ItemBlockBase(INC_DECK, false);
@@ -123,19 +136,6 @@ public class CbBlocks {
     public static final Item ITEM_INC_VERTICAL_STRIPES_DIRTY= new ItemBlockBase(INC_VERTICAL_STRIPES_DIRTY, false);
     public static final Item ITEM_INC_WIALL_WHITE= new ItemBlockBase(INC_WIALL_WHITE, false);
     public static final Item ITEM_INC_KITCHEN_RANGE = new ItemBlockBase(INC_KITCHEN_RANGE, false);
-    public static final Item ITEM_INC_OAK = new ItemBlockBase(INC_OAK, true);
-
-    /**
-     * <h2>BLOCK/ROAD 初始化区域</h2>
-     **/
-    //blocks
-    public static final BlockBase ASPHALT = new BlockAsphalt();
-
-    /**
-     * <h2>ITEM_BLOCK/ROAD 初始化区域</h2>
-     **/
-    //items
-    public static final ItemBlockAsphalt ITEM_ASPHALT = new ItemBlockAsphalt();
 
     /**
      * <h2>registerBlocks({@link IForgeRegistry<Block>} registry)</h2>
