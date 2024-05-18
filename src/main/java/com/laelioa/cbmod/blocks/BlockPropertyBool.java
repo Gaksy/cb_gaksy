@@ -15,6 +15,11 @@ import net.minecraft.world.World;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
+/**
+ * <h2>Class BlockPropertyBool</h2>
+ * 具有两种状态的方块可继承该类，仅限于该项目。
+ * 如创建具有按钮、拉杆属性的物品请勿继承该类。
+ * */
 public class BlockPropertyBool extends BlockBase {
     private final PropertyBool TYPE;
 

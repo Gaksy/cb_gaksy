@@ -5,6 +5,7 @@ import com.laelioa.cbmod.blocks.BlockBase;
 import com.laelioa.cbmod.init.CbBlocks;
 import com.laelioa.cbmod.init.RegistryHandler;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockLever;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
