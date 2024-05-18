@@ -1,6 +1,0 @@
-{
-  "variants": {
-    "broken=true": { "model": "cbmod:inception/gravel/inc_gravel_broken_model" },
-    "broken=false": { "model": "cbmod:inception/gravel/inc_gravel_default_model" }
-  }
-}

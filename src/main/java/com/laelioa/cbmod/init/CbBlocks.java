@@ -42,45 +42,9 @@ public class CbBlocks {
     public static final Block INC_CONCRETE = new BlockConcrete();
     public static final Block INC_MARBLE = new BlockMarble();
     public static final Block INC_FLOOR = new BlockFloor();
-    public static final Block INC_GRAVEL = new BlockGravel();
-    public static final Block INC_OAK = new BlockOak();
     public static final Block INC_ASPHALT = new BlockBase("inc_asphalt", ComfortBox.incTab, "inception/inc_asphalt");
     public static final Block INC_FROSTED_BLOCK = new BlockBase("inc_frosted_block", ComfortBox.incTab, "inception/inc_frosted_block");
     public static final Block INC_DECK = new BlockBase("inc_deck", ComfortBox.incTab, "inception/inc_deck");
-
-    public static final Block INC_BAD_PLANK = new BlockBase("inc_bad_plank", ComfortBox.incTab, "inception/inc_bad_plank");
-    public static final Block INC_COAL = new BlockBase("inc_coal", ComfortBox.incTab, "inception/inc_coal");
-    public static final Block INC_CROCODILE_LEATHER = new BlockBase("inc_crocodile_leather", ComfortBox.incTab, "inception/inc_crocodile_leather");
-    public static final Block INC_DAMASCUS_STEEL = new BlockBase("inc_damascus_steel", ComfortBox.incTab, "inception/inc_damascus_steel");
-    public static final Block INC_FLANNEL = new BlockBase("inc_flannel", ComfortBox.incTab, "inception/inc_flannel");
-    public static final Block INC_GOLD_BLOCK = new BlockBase("inc_gold_block", ComfortBox.incTab, "inception/inc_gold_block");
-    public static final Block INC_GRANITE = new BlockBase("inc_granite", ComfortBox.incTab, "inception/inc_granite");
-    public static final Block INC_HIGHLY_REFLECTIVE = new BlockBase("inc_highly_reflective", ComfortBox.incTab, "inception/inc_highly_reflective");
-    public static final Block INC_ICE_BLOCK = new BlockBase("inc_ice_block", ComfortBox.incTab, "inception/inc_ice_block");
-    public static final Block INC_IRON_BLOCK = new BlockBase("inc_iron_block", ComfortBox.incTab, "inception/inc_iron_block");
-    public static final Block INC_LATEX_MATTRESS = new BlockBase("inc_latex_mattress", ComfortBox.incTab, "inception/inc_latex_mattress");
-    public static final Block INC_LEATHER = new BlockBase("inc_leather", ComfortBox.incTab, "inception/inc_leather");
-    public static final Block INC_LIMESTONE = new BlockBase("inc_limestone", ComfortBox.incTab, "inception/inc_limestone");
-    public static final Block INC_LINEN = new BlockBase("inc_linen", ComfortBox.incTab, "inception/inc_linen");
-    public static final Block INC_LOG_SMOOTH = new BlockBase("inc_log_smooth", ComfortBox.incTab, "inception/inc_log_smooth");
-    public static final Block INC_LUXURIOUS_LEATHER = new BlockBase("inc_luxurious_leather", ComfortBox.incTab, "inception/inc_luxurious_leather");
-    public static final Block INC_MIRROR = new BlockBase("inc_mirror", ComfortBox.incTab, "inception/inc_mirror");
-    public static final Block INC_PINEWOOD = new BlockBase("inc_pinewood", ComfortBox.incTab, "inception/inc_pinewood");
-    public static final Block INC_PLASTIC = new BlockBase("inc_plastic", ComfortBox.incTab, "inception/inc_plastic");
-    public static final Block INC_POLYGON_STITCHING = new BlockBase("inc_polygon_stitching", ComfortBox.incTab, "inception/inc_polygon_stitching");
-    public static final Block INC_RATTAN = new BlockBase("inc_rattan", ComfortBox.incTab, "inception/inc_rattan");
-    public static final Block INC_RECTANGLE_STITCHING = new BlockBase("inc_rectangle_stitching", ComfortBox.incTab, "inception/inc_rectangle_stitching");
-    public static final Block INC_REFLECTIVE_METAL = new BlockBase("inc_reflective_metal", ComfortBox.incTab, "inception/inc_reflective_metal");
-    public static final Block INC_SAND = new BlockBase("inc_sand", ComfortBox.incTab, "inception/inc_sand");
-    public static final Block INC_SANDSTONE_CULTURE = new BlockBase("inc_sandstone_culture", ComfortBox.incTab, "inception/inc_sandstone_culture");
-    public static final Block INC_SKIN_STRIAE_BRICKS = new BlockBase("inc_skin_striae_bricks", ComfortBox.incTab, "inception/inc_skin_striae_bricks");
-    public static final Block INC_SPOTLIGHT = new BlockBase("inc_spotlight", ComfortBox.incTab, "inception/inc_spotlight");
-    public static final Block INC_TABLECLOTH = new BlockBase("inc_tablecloth", ComfortBox.incTab, "inception/inc_tablecloth");
-    public static final Block INC_TATAMI = new BlockBase("inc_tatami", ComfortBox.incTab, "inception/inc_tatami");
-    public static final Block INC_TERRAZZO = new BlockBase("inc_terrazzo", ComfortBox.incTab, "inception/inc_terrazzo");
-    public static final Block INC_VERTICAL_STRIPES_DIRTY = new BlockBase("inc_vertical_stripes_dirty", ComfortBox.incTab, "inception/inc_vertical_stripes_dirty");
-    public static final Block INC_WIALL_WHITE = new BlockBase("inc_wall_white", ComfortBox.incTab, "inception/inc_wall_white");
-    public static final Block INC_KITCHEN_RANGE = new BlockBase("inc_kitchen_range", ComfortBox.incTab, "inception/inc_kitchen_range");
 
     /**
      * <h2>ITEM_BLOCK/ROAD 初始化区域</h2>
@@ -98,44 +62,9 @@ public class CbBlocks {
     public static final Item ITEM_INC_CONCRETE = new ItemBlockBase(INC_CONCRETE, true);
     public static final Item ITEM_INC_MARBLE = new ItemBlockMarble();
     public static final Item ITEM_INC_FLOOR = new ItemBlockBase(INC_FLOOR, true);
-    public static final Item ITEM_INC_GRAVEL = new ItemBlockGravel();
-    public static final Item ITEM_INC_OAK = new ItemBlockOak();
     public static final Item ITEM_INC_ASPHALT = new ItemBlockBase(INC_ASPHALT, false);
     public static final Item ITEM_INC_FROSTED = new ItemBlockBase(INC_FROSTED_BLOCK, false);
     public static final Item ITEM_INC_DECK = new ItemBlockBase(INC_DECK, false);
-
-    public static final Item ITEM_INC_BAD_PLANK = new ItemBlockBase(INC_BAD_PLANK, false);
-    public static final Item ITEM_INC_COAL = new ItemBlockBase(INC_COAL, false);
-    public static final Item ITEM_INC_CROCODILE_LEATHER = new ItemBlockBase(INC_CROCODILE_LEATHER, false);
-    public static final Item ITEM_INC_DAMASCUS_STEEL = new ItemBlockBase(INC_DAMASCUS_STEEL, false);
-    public static final Item ITEM_INC_FLANNEL = new ItemBlockBase(INC_FLANNEL, false);
-    public static final Item ITEM_INC_GOLD_BLOCK = new ItemBlockBase(INC_GOLD_BLOCK, false);
-    public static final Item ITEM_INC_GRANITE = new ItemBlockBase(INC_GRANITE, false);
-    public static final Item ITEM_INC_HIGHLY_REFLECTIVE = new ItemBlockBase(INC_HIGHLY_REFLECTIVE, false);
-    public static final Item ITEM_INC_ICE_BLOCK = new ItemBlockBase(INC_ICE_BLOCK, false);
-    public static final Item ITEM_INC_IRON_BLOCK = new ItemBlockBase(INC_IRON_BLOCK, false);
-    public static final Item ITEM_INC_LATEX_MATTRESS = new ItemBlockBase(INC_LATEX_MATTRESS, false);
-    public static final Item ITEM_INC_LEATHER = new ItemBlockBase(INC_LEATHER, false);
-    public static final Item ITEM_INC_LIMESTONE = new ItemBlockBase(INC_LIMESTONE, false);
-    public static final Item ITEM_INC_LOG_SMOOTH = new ItemBlockBase(INC_LOG_SMOOTH, false);
-    public static final Item ITEM_INC_LUXURIOUS_LEATHER = new ItemBlockBase(INC_LUXURIOUS_LEATHER, false);
-    public static final Item ITEM_INC_MIRROR = new ItemBlockBase(INC_MIRROR, false);
-    public static final Item ITEM_INC_PINEWOOD = new ItemBlockBase(INC_PINEWOOD, false);
-    public static final Item ITEM_INC_PLASTIC = new ItemBlockBase(INC_PLASTIC, false);
-    public static final Item ITEM_INC_POLYGON_STITCHING = new ItemBlockBase(INC_POLYGON_STITCHING, false);
-    public static final Item ITEM_INC_RATTAN = new ItemBlockBase(INC_RATTAN, false);
-    public static final Item ITEM_INC_RECTANGLE_STITCHING = new ItemBlockBase(INC_RECTANGLE_STITCHING,false);
-    public static final Item ITEM_INC_REFLECTIVE_METAL = new ItemBlockBase(INC_REFLECTIVE_METAL, false);
-    public static final Item ITEM_INC_SAND = new ItemBlockBase(INC_SAND, false);
-    public static final Item ITEM_INC_SANDSTONE_CULTURE = new ItemBlockBase(INC_SANDSTONE_CULTURE, false);
-    public static final Item ITEM_INC_SKIN_STRIAE_BRICKS = new ItemBlockBase(INC_SKIN_STRIAE_BRICKS, false);
-    public static final Item ITEM_INC_SPOTLIGHT = new ItemBlockBase(INC_SPOTLIGHT, false);
-    public static final Item ITEM_INC_TABLECLOTH= new ItemBlockBase(INC_TABLECLOTH, false);
-    public static final Item ITEM_INC_TATAMI= new ItemBlockBase(INC_TATAMI, false);
-    public static final Item ITEM_INC_TERRAZZO= new ItemBlockBase(INC_TERRAZZO, false);
-    public static final Item ITEM_INC_VERTICAL_STRIPES_DIRTY= new ItemBlockBase(INC_VERTICAL_STRIPES_DIRTY, false);
-    public static final Item ITEM_INC_WIALL_WHITE= new ItemBlockBase(INC_WIALL_WHITE, false);
-    public static final Item ITEM_INC_KITCHEN_RANGE = new ItemBlockBase(INC_KITCHEN_RANGE, false);
 
     /**
      * <h2>registerBlocks({@link IForgeRegistry<Block>} registry)</h2>
