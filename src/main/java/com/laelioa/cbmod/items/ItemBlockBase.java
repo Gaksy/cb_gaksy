@@ -1,13 +1,13 @@
 package com.laelioa.cbmod.items;
 
-import com.laelioa.cbmod.Reference;
-import com.laelioa.cbmod.blocks.BlockBase;
 import com.laelioa.cbmod.init.RegistryHandler;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNullableByDefault;
+import java.util.Objects;
 
 /**
  * <h2>Class ItemBlockBase</h2>
@@ -28,11 +28,11 @@ import javax.annotation.Nonnull;
  * @author gaksy
  * */
 public class ItemBlockBase extends ItemBlock {
-    public ItemBlockBase(Block block, boolean hasSubTypes) {
-        super(block);
-        setRegistryName(Reference.MODID, ((BlockBase)block).getName());         //设置注册名称
-        setHasSubtypes(hasSubTypes);                                      //设置...
-        RegistryHandler.addItem(((BlockBase)block).getName(), this);    //将物品添加到注册列表
+    public ItemBlockBase(Block currentBlock, boolean hasSubTypes) {
+        super(currentBlock);                                                                //block 与基类成员变量重名，应避开同名
+        setRegistryName(Objects.requireNonNull(currentBlock.getRegistryName()));            //设置注册名称
+        setHasSubtypes(hasSubTypes);                                                        //设置...
+        RegistryHandler.addItem(this);                                                      //将物品添加到注册列表
     }
 
     @Override
@@ -42,7 +42,12 @@ public class ItemBlockBase extends ItemBlock {
 
     @Nonnull
     @Override
+    @ParametersAreNullableByDefault
     public String getUnlocalizedName(ItemStack stack) {
-        return this.getHasSubtypes() ? super.getUnlocalizedName() + "_" + stack.getMetadata() : super.getUnlocalizedName();
+        if (this.getHasSubtypes() && stack != null) {
+            return super.getUnlocalizedName() + "_" + stack.getMetadata();
+        } else {
+            return super.getUnlocalizedName();
+        }
     }
 }

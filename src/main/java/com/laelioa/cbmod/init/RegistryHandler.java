@@ -9,10 +9,9 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * <h2>Class Registrant</h2>
@@ -43,14 +42,14 @@ public class RegistryHandler {
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
-        CbBlocks.registerBlocks(event.getRegistry());                           //额外的需要注册的方块
-        event.getRegistry().registerAll(getBlocks().toArray(new Block[0]));     //注册所有在列表里的方块
+        CbBlocks.registerBlocks(event.getRegistry());     //额外的需要注册的方块
+        event.getRegistry().registerAll(getBlocks());     //注册所有在列表里的方块
     }
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
-        CbBlocks.registerItemBlocks(event.getRegistry());                       //额外的需要注册的物品
-        event.getRegistry().registerAll(getItems().toArray(new Item[0]));       //注册所有在列表里的物品
+        CbBlocks.registerItemBlocks(event.getRegistry());  //额外的需要注册的物品
+        event.getRegistry().registerAll(getItems());       //注册所有在列表里的物品
     }
 
     @SubscribeEvent
@@ -59,64 +58,53 @@ public class RegistryHandler {
     }
 
     /**
-     * <h2>addBlock({@link String} block_name, {@link net.minecraft.block.Block} dec_block)</h2>
-     *
-     * <p>{@link String} block_name: 方块ID</p>
-     * <p>{@link net.minecraft.block.Block} dec_block: 要添加的方块</p>
-     *
-     * <p>描述：添加方块到注册列表，该列表具有去重功能，防止重复注册</p>
+     * 添加方块到注册列表，该列表具有去重功能，防止重复注册
+     * @param block 方块
      *
      * @author gaksy
      * */
-    public static void addBlock(String name, Block block) {
-        if(!BLOCKS.containsKey(name)) {
-            BLOCKS.put(name, block);
+    public static void addBlock(Block block) {
+        if(!BLOCKS.containsKey(Objects.requireNonNull(block.getRegistryName()).toString())) {
+            BLOCKS.put(Objects.requireNonNull(block.getRegistryName()).toString(), block);
         }
     }
 
     /**
-     * <h2>addItem({@link String} item_name, {@link net.minecraft.item.Item} dec_item)</h2>
-     *
-     * <p>{@link String} item_name: 物品ID</p>
-     * <p>{@link net.minecraft.block.Block} dec_item: 要添加的物品</p>
-     *
-     * <p>描述：添加物品到注册列表，该列表具有去重功能，防止重复注册</p>
-     *
+     * 添加物品到注册列表，该列表具有去重功能，防止重复注册
+     * @param item 物品
      * @author gaksy
      * */
-    public static void addItem(String name, Item item) {
-        if (!ITEMS.containsKey(name)) {
-            ITEMS.put(name, item);
+    public static void addItem(Item item) {
+        if (!ITEMS.containsKey(Objects.requireNonNull(item.getRegistryName()).toString())) {
+            ITEMS.put(Objects.requireNonNull(item.getRegistryName()).toString(), item);
         }
     }
 
     /**
-     * <h2>getBlocks()</h2>
-     *
-     * <p>return {@link List<net.minecraft.block.Block>}: 返回当前方块注册列表</p>
-     *
+     * @return 返回当前方块注册列表
      * @author gaksy
      * */
-    public static List<Block> getBlocks() {
-        List<Block> list = new ArrayList<>();
+    public static Block[] getBlocks() {
+        Block[] blockArray = new Block[BLOCKS.size()];
+        int index = 0;
         for (String name : BLOCKS.keySet()) {
-            list.add(BLOCKS.get(name));
+            blockArray[index] = BLOCKS.get(name);
+            ++index;
         }
-        return list;
+        return blockArray;
     }
 
     /**
-     * <h2>getItems()</h2>
-     *
-     * <p>return {@link List<net.minecraft.item.Item>}: 返回当前物品注册列表</p>
-     *
+     * @return 返回当前物品注册列表
      * @author gaksy
      * */
-    public static List<Item> getItems() {
-        List<Item> list = new ArrayList<>();
+    public static Item[] getItems() {
+        Item[] itemArray = new Item[ITEMS.size()];
+        int index = 0;
         for (String name : ITEMS.keySet()) {
-            list.add(ITEMS.get(name));
+            itemArray[index] = ITEMS.get(name);
+            ++index;
         }
-        return list;
+        return itemArray;
     }
 }
